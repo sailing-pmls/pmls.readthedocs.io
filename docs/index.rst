@@ -14,8 +14,8 @@ In addition to distributed ML programming tools, Petuum comes with many distribu
 
 Petuum comes from "perpetuum mobile," which is a musical style characterized by a continuous steady stream of notes. Paganini's Moto Perpetuo is an excellent example. It is our goal to build a system that runs efficiently and reliably -- in perpetual motion.
 
-..Welcome to Petuum's documentation!
-..==================================
+.. Welcome to Petuum's documentation!
+.. ==================================
 
 Contents:
 
