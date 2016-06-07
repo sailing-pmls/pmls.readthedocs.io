@@ -12,7 +12,13 @@ Petuum provides essential distributed programming tools to tackle the challenges
 
 In addition to distributed ML programming tools, Petuum comes with many distributed ML algorithms, all implemented on top of the Petuum framework for speed and scalability. Please refer to the Petuum wiki for a full listing: https://github.com/petuum/bosen/wiki
 
-Petuum comes from "perpetuum mobile," which is a musical style characterized by a continuous steady stream of notes. Paganini's Moto Perpetuo is an excellent example. It is our goal to build a system that runs efficiently and reliably -- in perpetual motion.
+The Petuum project is organized into 4 open-source (BSD 3-clause license) Github repositories:
+* [Bösen (C++ bounded-async key-value store)](https://github.com/petuum/bosen)
+* [Strads (C++ model-parallel scheduler)](https://github.com/petuum/strads)
+* [JBösen (Java bounded-async key-value store)](https://github.com/petuum/jbosen)
+* [Poseidon (Deep Learning framework)](https://github.com/petuum/poseidon)
+
+The name Petuum comes from "perpetuum mobile," which is a musical style characterized by a continuous steady stream of notes. Paganini's Moto Perpetuo is an excellent example. It is our goal to build a system that runs efficiently and reliably -- in perpetual motion.
 
 .. Welcome to Petuum's documentation!
 .. ==================================
