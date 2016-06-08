@@ -25,11 +25,11 @@ Applications
 In addition to programming frameworks, Petuum includes many built-in distributed ML algorithms, each implemented for speed and scalability:
 
 1. Topic Models
-  * Latent Dirichlet allocation (topic modeling)
-  * MedLDA (supervised topic modeling)
+ * Latent Dirichlet allocation (topic modeling)
+ * MedLDA (supervised topic modeling)
 2. Deep Learning
-  * General-purpose deep neural network
-  * DNN for speech recognition
+ * General-purpose deep neural network
+ * DNN for speech recognition
 3. Matrix factorization and Sparse coding
   * Matrix factorization
   * Non-negative matrix factorization
