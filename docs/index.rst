@@ -9,13 +9,13 @@
 Overview
 ========
 
-Petuum is a distributed machine learning (ML) framework. It takes care of the difficult system "plumbing work", allowing you to focus on the ML. Petuum runs efficiently at scale on research clusters and cloud compute like Amazon EC2 and Google GCE.
+Petuum is a distributed machine learning (ML) framework. It takes care of the difficult system "plumbing work", allowing users to focus on the ML. Petuum runs efficiently at scale in data-centers and cloud compute environments like Amazon EC2 and Google GCE.
 
-Petuum provides essential distributed programming tools to tackle the challenges of running ML at scale: Big Data (many data samples) and Big Models (very large parameter and intermediate variable spaces). Unlike general-purpose distributed programming platforms, Petuum is designed specifically for ML algorithms. This means that Petuum takes advantage of data correlation, staleness, and other statistical properties to maximize the performance for ML algorithms, realized through core features such as Bosen, a bounded-asynchronous key-value store, and Strads, a scheduler for iterative ML computations.
+Petuum provides the essential distributed programming tools to tackle the challenges of running ML at scale: big data (many data samples) and big models (large parameter and intermediate variable spaces). Unlike general-purpose data processing platforms like Hadoop and Spark, Petuum is designed specifically for ML algorithms, which means that it is able to take advantage of data correlation, error tolerance, and other statistical properties to maximize the performance of ML algorithms. This is all realized through core features such as Bosen (a bounded-asynchronous key-value store) and Strads (a scheduler for model-parallel ML computations).
 
-In addition to distributed ML programming tools, Petuum comes with many distributed ML algorithms, all implemented for speed and scalability. Please refer to the Petuum wiki for a full listing: `<https://github.com/petuum/bosen/wiki>`_.
+In addition to distributed ML programming tools, Petuum comes with many distributed ML algorithms, each implemented for speed and scalability. Please refer to the Petuum wiki for a full listing: `<https://github.com/petuum/bosen/wiki>`_.
 
-The Petuum project is organized into 3 open-source (BSD 3-clause license) Github repositories:
+The Petuum project is organized into three open-source components:
 
 * `Bosen (Bounded-async key-value store) <https://github.com/petuum/bosen>`_
 * `Strads (Model-parallel scheduler) <https://github.com/petuum/strads>`_
