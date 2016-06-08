@@ -28,12 +28,9 @@ The name Petuum comes from "perpetuum mobile," which is a musical style characte
 .. toctree::
    :maxdepth: 2
 
+.. Indices and tables
+.. ==================
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
