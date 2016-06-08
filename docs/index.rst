@@ -14,7 +14,7 @@ Petuum is a distributed machine learning (ML) framework. It takes care of the di
 Petuum provides the essential distributed programming tools to tackle the challenges of running ML at scale: big data (many data samples) and big models (large parameter and intermediate variable spaces). Unlike general-purpose data processing platforms like Hadoop and Spark, Petuum is designed specifically for ML algorithms, which means that it is able to take advantage of data correlation, error tolerance, and other statistical properties to maximize the performance of ML algorithms. This is all realized through the three following core components.
 
 * `Bosen (Network-optimized iterative ML) <https://github.com/petuum/bosen>`_
-* `Strads (Model-parallel scheduling) <https://github.com/petuum/strads>`_
+* `Strads (Model-parallel scheduled ML) <https://github.com/petuum/strads>`_
 * `Poseidon (Multi-GPU distributed deep dearning) <https://github.com/petuum/poseidon>`_
 
 In addition to distributed ML programming tools, Petuum includes many built-in distributed ML algorithms, each implemented for speed and scalability. Please refer to the Petuum wiki for a full listing: `<https://github.com/petuum/bosen/wiki>`_.
