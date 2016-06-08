@@ -15,7 +15,7 @@ Petuum provides the essential distributed programming tools to tackle the challe
 
 * `Bosen (Network-optimized iterative ML) <https://github.com/petuum/bosen>`_
 * `Strads (Model-parallel scheduled ML) <https://github.com/petuum/strads>`_
-* `Poseidon (Multi-GPU distributed deep dearning) <https://github.com/petuum/poseidon>`_
+* `Poseidon (Multi-GPU distributed deep learning) <https://github.com/petuum/poseidon>`_
 
 In addition to distributed ML programming tools, Petuum includes many built-in distributed ML algorithms, each implemented for speed and scalability. Please refer to the Petuum wiki for a full listing: `<https://github.com/petuum/bosen/wiki>`_.
 
