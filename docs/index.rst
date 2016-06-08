@@ -9,9 +9,9 @@
 Overview
 ========
 
-Petuum is a distributed machine learning (ML) framework. It takes care of the difficult system "plumbing work", allowing users to focus on the ML. Petuum runs efficiently at scale in data-centers and cloud compute environments like Amazon EC2 and Google GCE.
+Petuum is a distributed machine learning (ML) platform. It takes care of the difficult system "plumbing work", allowing users to focus on the ML. Petuum runs efficiently at scale in data-centers and cloud compute environments like Amazon EC2 and Google GCE.
 
-Petuum provides the essential distributed programming tools to tackle the challenges of running ML at scale: big data (many data samples) and big models (large parameter and intermediate variable spaces). Unlike general-purpose data processing platforms like Hadoop and Spark, Petuum is designed specifically for ML algorithms, which means that it is able to take advantage of data correlation, error tolerance, and other statistical properties to maximize the performance of ML algorithms. This is all realized through the following three core components:
+Petuum provides the essential distributed programming tools to tackle the challenges of running ML at scale: big data (many data samples) and big models (large parameter and intermediate variable spaces). Unlike general-purpose data processing platforms like Hadoop and Spark, Petuum is designed specifically for ML algorithms, which means that it is able to take advantage of data correlation, error tolerance, and other statistical properties to maximize the performance of ML algorithms. This is all realized through the following three core frameworks:
 
 * Bosen, for network-optimized iterative ML. [`doc <https://github.com/petuum/bosen>`_] [`github <https://github.com/petuum/bosen>`_]
 * Strads, for model-parallel scheduled ML. [`doc <https://github.com/petuum/strads>`_] [`github <https://github.com/petuum/strads>`_]
@@ -22,7 +22,29 @@ The name Petuum comes from "perpetuum mobile," which is a musical style characte
 Applications
 ------------
 
-In addition to distributed ML programming tools, Petuum includes many built-in distributed ML algorithms, each implemented for speed and scalability.
+In addition to programming frameworks, Petuum includes many built-in distributed ML algorithms, each implemented for speed and scalability:
+
+1. Topic Models
+  1. Latent Dirichlet allocation (topic modeling)
+  1. MedLDA (supervised topic modeling)
+1. Deep Learning
+  1. General-purpose deep neural network
+  1. DNN for speech recognition
+1. Matrix factorization and Sparse coding
+  1. Matrix factorization
+  1. Non-negative matrix factorization
+  1. Sparse coding
+1. Regression
+  1. Lasso regression
+1. Metric learning
+  1. Distance metric learning
+1. Clustering
+  1. K-means clustering
+1. Classification
+  1. Random forest
+  1. Logistic regression
+  1. Support-vector machine
+  1. Multi-class logistic regression
 
 .. Welcome to Petuum's documentation!
 .. ==================================
