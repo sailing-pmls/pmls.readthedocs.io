@@ -17,9 +17,12 @@ Petuum provides the essential distributed programming tools to tackle the challe
 * `Strads (Model-parallel scheduled ML) <https://github.com/petuum/strads>`_
 * `Poseidon (Multi-GPU distributed deep learning) <https://github.com/petuum/poseidon>`_
 
-In addition to distributed ML programming tools, Petuum includes many built-in distributed ML algorithms, each implemented for speed and scalability. Please refer to the Petuum wiki for a full listing: `<https://github.com/petuum/bosen/wiki>`_.
-
 The name Petuum comes from "perpetuum mobile," which is a musical style characterized by a continuous steady stream of notes. Paganini's Moto Perpetuo is an excellent example. It is our goal to build a system that runs efficiently and reliably -- in perpetual motion.
+
+Applications
+------------
+
+In addition to distributed ML programming tools, Petuum includes many built-in distributed ML algorithms, each implemented for speed and scalability.
 
 .. Welcome to Petuum's documentation!
 .. ==================================
