@@ -25,26 +25,26 @@ Applications
 In addition to programming frameworks, Petuum includes many built-in distributed ML algorithms, each implemented for speed and scalability:
 
 1. Topic Models
-  a) Latent Dirichlet allocation (topic modeling)
-  b) MedLDA (supervised topic modeling)
+  * Latent Dirichlet allocation (topic modeling)
+  * MedLDA (supervised topic modeling)
 2. Deep Learning
-  a) General-purpose deep neural network
-  b) DNN for speech recognition
+  * General-purpose deep neural network
+  * DNN for speech recognition
 3. Matrix factorization and Sparse coding
-  a) Matrix factorization
-  b) Non-negative matrix factorization
-  c) Sparse coding
+  * Matrix factorization
+  * Non-negative matrix factorization
+  * Sparse coding
 4. Regression
-  a) Lasso regression
+  * Lasso regression
 5. Metric learning
-  a) Distance metric learning
+  * Distance metric learning
 6. Clustering
-  a) K-means clustering
+  * K-means clustering
 7. Classification
-  a) Random forest
-  b) Logistic regression
-  c) Support-vector machine
-  d) Multi-class logistic regression
+  * Random forest
+  * Logistic regression
+  * Support-vector machine
+  * Multi-class logistic regression
 
 .. Welcome to Petuum's documentation!
 .. ==================================
