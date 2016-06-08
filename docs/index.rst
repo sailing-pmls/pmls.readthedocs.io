@@ -34,7 +34,7 @@ In addition to programming frameworks, Petuum includes many built-in distributed
    * General-purpose deep neural network
    * DNN for speech recognition
 
-3. Matrix factorization and Sparse coding
+3. Matrix factorization and sparse coding
 
    * Matrix factorization
    * Non-negative matrix factorization
