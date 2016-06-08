@@ -10,7 +10,7 @@ Petuum is a distributed machine learning framework. It takes care of the difficu
 
 Petuum provides essential distributed programming tools to tackle the challenges of running ML at scale: Big Data (many data samples) and Big Models (very large parameter and intermediate variable spaces). Unlike general-purpose distributed programming platforms, Petuum is designed specifically for ML algorithms. This means that Petuum takes advantage of data correlation, staleness, and other statistical properties to maximize the performance for ML algorithms, realized through core features such as Bosen, a bounded-asynchronous key-value store, and Strads, a scheduler for iterative ML computations.
 
-In addition to distributed ML programming tools, Petuum comes with many distributed ML algorithms, all implemented on top of the Petuum framework for speed and scalability. Please refer to the Petuum wiki for a full listing: https://github.com/petuum/bosen/wiki
+In addition to distributed ML programming tools, Petuum comes with many distributed ML algorithms, all implemented on top of the Petuum framework for speed and scalability. Please refer to the Petuum wiki for a full listing: `https://github.com/petuum/bosen/wiki`.
 
 The Petuum project is organized into 4 open-source (BSD 3-clause license) Github repositories:
 
@@ -24,7 +24,7 @@ The name Petuum comes from "perpetuum mobile," which is a musical style characte
 .. Welcome to Petuum's documentation!
 .. ==================================
 
-Contents:
+.. Contents:
 
 .. toctree::
    :maxdepth: 2
