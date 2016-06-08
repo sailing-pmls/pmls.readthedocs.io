@@ -5,7 +5,7 @@
 
 .. image:: _images/full_logo.png
     :align: center
-
+|
 Overview
 ========
 
