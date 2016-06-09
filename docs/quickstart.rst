@@ -36,7 +36,7 @@ Now Petuum is ready to go. To run the Multi-class Logistic Regression demo (in B
 ::
   python petuum.py run_mlr
 
-The app launches locally and trains multi-class logistic regression model using a subset of the `Covertype dataset <https://archive.ics.uci.edu/ml/datasets/Covertype>`. You should see something like below. The numbers will be slightly different as it's executed indeterministically with multi-threads. 
+The app launches locally and trains multi-class logistic regression model using a subset of the `Covertype dataset <https://archive.ics.uci.edu/ml/datasets/Covertype>`_. You should see something like below. The numbers will be slightly different as it's executed indeterministically with multi-threads. 
 ::
   40 400 0.253846 0.61287 520 0.180000 50 7.43618
   I0701 00:35:00.550900  9086 mlr_engine.cpp:298] Final eval: 40 400 train-0-1: 0.253846 train-entropy: 0.61287 num-train-used: 520 test-0-1: 0.180000 num-test-used: 50 time: 7.43618
@@ -48,7 +48,7 @@ To run the MedLDA supervised topic model (in STRADS system), run
 ::
   python petuum.py run_lda
 
-The app launches 3 workers locally and trains with `20 newsgroup <http://qwone.com/~jason/20Newsgroups/>` dataset. You will see outputs like below. Once all workers have reported "Ready to exit program", you may Ctrl-C to terminate the program.
+The app launches 3 workers locally and trains with `20 newsgroup <http://qwone.com/~jason/20Newsgroups/>`_ dataset. You will see outputs like below. Once all workers have reported "Ready to exit program", you may Ctrl-C to terminate the program.
 ::
   ......
   Rank (2) Ready to exit program from main function in ldall.cpp
@@ -62,4 +62,4 @@ Use the following command to display top 10 words in each of the topics that's j
   python petuum.py display_topics
 
 If you seek further deployment or prefer a more detailed hands-on experience, please refer to the full installation guide or the manual.
-Also check out `Poseiden <https://github.com/petuum/poseidon/wiki#quick-start>`, the multi-GPU distributed deep learning framework of Petuum.
+Also check out `Poseiden <https://github.com/petuum/poseidon/wiki#quick-start>`_, the multi-GPU distributed deep learning framework of Petuum.
