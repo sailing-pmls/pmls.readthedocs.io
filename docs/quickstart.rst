@@ -48,7 +48,7 @@ To run the MedLDA supervised topic model (in STRADS system), run
 ::
   python petuum.py run_lda
 
-The app launches 3 workers locally and trains with [20 newsgroup](http://qwone.com/~jason/20Newsgroups/) dataset. You will see outputs like below. Once all workers have reported "Ready to exit program", you may Ctrl-C to terminate the program.
+The app launches 3 workers locally and trains with `20 newsgroup <http://qwone.com/~jason/20Newsgroups/>` dataset. You will see outputs like below. Once all workers have reported "Ready to exit program", you may Ctrl-C to terminate the program.
 ::
   ......
   Rank (2) Ready to exit program from main function in ldall.cpp
@@ -61,5 +61,5 @@ Use the following command to display top 10 words in each of the topics that's j
 ::
   python petuum.py display_topics
 
-If you seek further deployment or prefer a more detailed hands-on experience, please refer to the [[full installation guide|Installation]] or the [[manual|Home]].
-Also check out [Poseiden](https://github.com/petuum/poseidon/wiki#quick-start), the multi-GPU distributed deep learning framework of Petuum.
+If you seek further deployment or prefer a more detailed hands-on experience, please refer to the full installation guide or the manual.
+Also check out `Poseiden <https://github.com/petuum/poseidon/wiki#quick-start>`, the multi-GPU distributed deep learning framework of Petuum.
