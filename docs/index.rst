@@ -9,7 +9,7 @@
 Overview
 ========
 
-Petuum is a distributed machine learning (ML) platform. It takes care of the difficult system "plumbing work", allowing users to focus on the ML. Petuum runs efficiently at scale in data-centers and cloud compute environments like Amazon EC2 and Google GCE.
+Petuum is a distributed machine learning (ML) platform. It takes care of the difficult system "plumbing work", allowing users to focus on the ML. Petuum runs efficiently at scale in data-centers and cloud compute environments like Amazon EC2 and Google GCE. See our :doc:`quickstart guide <quickstart>` to get started running applications on Petuum.
 
 Petuum provides the essential distributed programming tools to tackle the challenges of running ML at scale: big data (many data samples) and big models (large parameter and intermediate variable spaces). Unlike general-purpose data processing platforms like Hadoop and Spark, Petuum is designed specifically for ML algorithms, which means that it is able to take advantage of data correlation, error tolerance, and other statistical properties to maximize the performance of ML algorithms. All of this is realized through the following three core frameworks:
 
