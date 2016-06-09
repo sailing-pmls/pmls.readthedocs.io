@@ -3,7 +3,8 @@ Quick Start
 
 The fastest way to get started with Petuum is to use this `script <https://gist.github.com/holyglenn/dc3a2b8a5d496735a0a297b0d5ec3479/raw/47442c52181545f40b4302c6ebdb19c25c75d433/petuum.py>`_, which will setup Bosen and Strads systems on a single machine with just 1 command.
 
-After setting it up, you can run two demo applications to verify that they are working. To get the script:::
+After setting it up, you can run two demo applications to verify that they are working. To get the script:
+::
   wget https://gist.githubusercontent.com/holyglenn/dc3a2b8a5d496735a0a297b0d5ec3479/raw/47442c52181545f40b4302c6ebdb19c25c75d433/petuum.py
 
 Before start, run the following command to prepare compilation environment.
