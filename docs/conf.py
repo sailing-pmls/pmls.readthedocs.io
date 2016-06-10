@@ -1,5 +1,12 @@
 from recommonmark.parser import CommonMarkParser
 
+def setup(app):
+  app.add_config_value('recommonmark_config', {
+    'auto_doc_ref': True,
+    'auto_toc_tree_section': 'Contents',
+  }, True)
+  app.add_transform(AutoStructify)
+
 # -*- coding: utf-8 -*-
 #
 # Petuum documentation build configuration file, created by
