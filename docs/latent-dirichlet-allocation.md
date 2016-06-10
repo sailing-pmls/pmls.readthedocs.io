@@ -6,7 +6,7 @@ After compiling Strads, we can test that it is working correctly with Latent Dir
 
 Topic modeling, a.k.a Latent Dirichlet Allocation (LDA), is an algorithm that discovers latent semantic structure from documents. LDA finds global topics, which are weighted vocabularies, and the topical composition of each document in the collection.
 
-Petuum's LDA app uses a new model-parallel Gibbs sampling scheme described in this 2014 [NIPS paper](http://www.cs.cmu.edu/~epxing/papers/2014/STRADS_NIPS14.pdf), and implemented on top of the Strads scheduler. The documents are partitioned onto different machines, which take turns to sample disjoint subsets of words. By keeping the word subsets disjoint, our model-parallel implementation exhibits improved convergence times and memory utilization over data-parallel strategies. We use the sparse Gibbs sampling procedure in Yao et al (2009).
+Petuum's Strads LDA app uses a new model-parallel Gibbs sampling scheme described in this 2014 [NIPS paper](http://www.cs.cmu.edu/~epxing/papers/2014/STRADS_NIPS14.pdf), and implemented on top of the Strads scheduler. The documents are partitioned onto different machines, which take turns to sample disjoint subsets of words. By keeping the word subsets disjoint, our model-parallel implementation exhibits improved convergence times and memory utilization over data-parallel strategies. We use the sparse Gibbs sampling procedure in Yao et al (2009).
 
 ### Performance 
 
