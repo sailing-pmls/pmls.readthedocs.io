@@ -10,7 +10,7 @@ The Petuum project is organized into 4 open-source (BSD 3-clause license) Github
 
 To install Bösen and Strads, please continue reading this manual. If you have a Java environment and want to use JBösen, please start [here](https://github.com/petuum/jbosen/wiki). If you wish to use Poseidon for Deep Learning, please go [here](https://github.com/petuum/poseidon/wiki).
 
-# Petuum Bösen/Strads v1.1 manual
+# Contents
 
 1. [Quickstart](quickstart.md)
     * [Detailed Installation Instructions](installation.md)
