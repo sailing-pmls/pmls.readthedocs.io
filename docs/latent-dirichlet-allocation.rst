@@ -18,7 +18,7 @@ The Strads LDA app can train an LDA model with 1K topics, from a corpus with 8M 
 Quickstart
 -----------
 
-Petuum LDA is implemented on Strads, and can be found in ::`strads/apps/lda_release/`. From this point on, all instructions will assume you are in `strads/apps/lda_release/`. After building Strads (as explained under Installation), you may build the LDA app from `strads/apps/lda_release/` by running
+Petuum LDA is implemented on Strads, and can be found in :code:`strads/apps/lda_release/`. From this point on, all instructions will assume you are in :code:`strads/apps/lda_release/`. After building Strads (as explained under Installation), you may build the LDA app from :code:`strads/apps/lda_release/` by running
 ::
   make
 
@@ -26,7 +26,7 @@ Test the app (on your local machine) by running
 ::
   ./run.py
 
-This will learn 1000 topics from a small subset of the NYtimes dataset, and output the word-topic and doc-topic tables to :code:`tmplog/wt-mach-*` and `tmplog/dt-mach-*` respectively.
+This will learn 1000 topics from a small subset of the NYtimes dataset, and output the word-topic and doc-topic tables to :code:`tmplog/wt-mach-*` and :code:`tmplog/dt-mach-*` respectively.
 
 Input data format
 -----------------
@@ -50,53 +50,47 @@ The LDA app outputs two types of files: word-topic tables :code:`tmplog/wt-mach-
   word-id, topic-id count, topic-id count, topic-id count ...
   ...
 
-Each line contains, for a particular word :code:`word-id`, all the topics `topic-id` that word is seen in, and the number of times `count` that word is seen in each topic.
+Each line contains, for a particular word :code:`word-id`, all the topics :code:`topic-id` that word is seen in, and the number of times :code:`count` that word is seen in each topic.
 
 The doc-topic tables follow an identical format:
+::
+  doc-id, topic-id count, topic-id count, topic-id count ...
+  doc-id, topic-id count, topic-id count, topic-id count ...
+  ...
 
-```
-doc-id, topic-id count, topic-id count, topic-id count ...
-doc-id, topic-id count, topic-id count, topic-id count ...
-...
-```
-
-The number of files `wt-mach-*` and `dt-mach-*` depends on the number of worker processes used --- see the next section for more information.
+The number of files :code:`wt-mach-*` and :code:`dt-mach-*` depends on the number of worker processes used --- see the next section for more information.
 
 Program options
 ---------------
 
-The LDA app is launched using a python script, e.g. `run.py` used earlier:
-
-```
-#!/usr/bin/python
-import os
-import sys
-
-datafile = ['./sampledata/nytimes_subset.id']
-topics = [' 1000 ']
-iterations = [' 3 ']
-threads = [' 16 ']
-
-machfile = ['./singlemach.vm']
-
-prog = ['./bin/ldall ']
-os.system("mpirun -machinefile "+machfile[0]+" "+prog[0]+" --machfile "+machfile[0]+" -threads "+threads[0]+" -num_topic "+topics[0]+" -num_iter "+iterations[0]+" -data_file "+datafile[0]+" -logfile tmplog/1 -wtfile_pre tmplog/wt -dtfile_pre tmplog/dt ");
-```
+The LDA app is launched using a python script, e.g. :code:`run.py` used earlier:
+::
+  #!/usr/bin/python
+  import os
+  import sys
+  
+  datafile = ['./sampledata/nytimes_subset.id']
+  topics = [' 1000 ']
+  iterations = [' 3 ']
+  threads = [' 16 ']
+  
+  machfile = ['./singlemach.vm']
+  
+  prog = ['./bin/ldall ']
+  os.system("mpirun -machinefile "+machfile[0]+" "+prog[0]+" --machfile "+machfile[0]+" -threads "+threads[0]+" -num_topic "+topics[0]+" -num_iter "+iterations[0]+" -data_file "+datafile[0]+" -logfile tmplog/1 -wtfile_pre tmplog/wt -dtfile_pre tmplog/dt ")
 
 The basic options are:
-* `datafile`: Path to the data file, which must be visible to all machines. If using multiple machines, provide the full path to the data file.
-* `topics`: How many topics to find.
-* `iterations`: How many iterations to run.
-* `threads`: How many threads to use for each Worker process.
-* `machfile`: Strads machine file; see below for details.
+* :code:`datafile`: Path to the data file, which must be visible to all machines. If using multiple machines, provide the full path to the data file.
+* :code:`topics`: How many topics to find.
+* :code:`iterations`: How many iterations to run.
+* :code:`threads`: How many threads to use for each Worker process.
+* :code:`machfile`: Strads machine file; see below for details.
 
-Strads requires a machine file - `singlemach.vm` in the above example. Strads machine files control which machines house Workers, the Scheduler, and the Coordinator (the 3 architectural elements of Strads). In `singlemach.vm`, we spawn all element processes on the local machine `127.0.0.1`, so the file simply looks like this:
-
-```
-127.0.0.1
-127.0.0.1
-127.0.0.1
-127.0.0.1
-```
+Strads requires a machine file - :code:`singlemach.vm` in the above example. Strads machine files control which machines house Workers, the Scheduler, and the Coordinator (the 3 architectural elements of Strads). In :code:`singlemach.vm`, we spawn all element processes on the local machine :code:`127.0.0.1`, so the file simply looks like this:
+::
+  127.0.0.1
+  127.0.0.1
+  127.0.0.1
+  127.0.0.1
 
 To prepare a multi-machine file, please refer to the Strads section under [[Configuration Files for Petuum Apps|Configuration-files-for-Petuum-apps]].
