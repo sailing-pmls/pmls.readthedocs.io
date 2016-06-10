@@ -31,7 +31,7 @@ In addition to programming frameworks, Petuum includes many built-in distributed
 
 2. Deep Learning
    
-   * :doc:`General-purpose deep neural network <dnn-general>`
+   * :doc:`General purpose DNN <dnn-general>`
    * :doc:`DNN for speech recognition <dnn-speech>`
 
 3. Matrix factorization and sparse coding
@@ -50,7 +50,7 @@ In addition to programming frameworks, Petuum includes many built-in distributed
 
 6. Clustering
  
-   * :doc:`K-means clustering <k-means>`
+   * :doc:`K-means <k-means>`
 
 7. Classification
  
