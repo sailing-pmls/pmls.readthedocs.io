@@ -1,3 +1,5 @@
+# Frequently asked questions
+
 **Q: What does "Petuum" mean?**
 
 A: Petuum comes from "perpetuum mobile," which is a musical style characterized by a continuous steady stream of notes - as if in perpetual motion. [Paganini's Moto Perpetuo](https://www.youtube.com/watch?feature=player_detailpage&v=dPRWshWq9E4#t=3) is an excellent example. In turn, Bösen and Strads embody the well-known Bösendorfer piano and Stradivarius violin - fine instruments, played by Liszt and Paganini respectively. The goal of the Petuum project is to build an ML platform that runs efficiently and reliably, like its namesake.
