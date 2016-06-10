@@ -12,7 +12,6 @@ To install Bösen and Strads, please continue reading this manual. If you have a
 
 ## Contents
 
-* [Overview](index.md)
 * [Quickstart](quickstart.md)
 * [Detailed Installation Instructions](installation.md)
 * [Configuration and Machine Files for Petuum Apps](configuration.md)
