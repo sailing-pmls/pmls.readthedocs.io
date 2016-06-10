@@ -8,9 +8,7 @@ Introduction to LDA
 
 Topic modeling, a.k.a Latent Dirichlet Allocation (LDA), is an algorithm that discovers latent semantic structure from documents. LDA finds global topics, which are weighted vocabularies, and the topical composition of each document in the collection.
 
-In Petuum v1.0, our LDA app uses a new model-parallel Gibbs sampling scheme described in this 2014 [[NIPS paper|http://www.cs.cmu.edu/~epxing/papers/2014/STRADS_NIPS14.pdf]], and implemented on top of the Strads scheduler. The documents are partitioned onto different machines, which take turns to sample disjoint subsets of words. By keeping the word subsets disjoint, our model-parallel implementation exhibits improved convergence times and memory utilization over data-parallel strategies. We use the sparse Gibbs sampling procedure in Yao et al (2009).
-
-If you would like to use the older Bösen-based Petuum LDA app, you may obtain it from the [[Petuum v0.93 release|https://github.com/petuum/public/tree/release_0.93]].
+In Petuum v1.0, our LDA app uses a new model-parallel Gibbs sampling scheme described in this 2014 `NIPS paper <http://www.cs.cmu.edu/~epxing/papers/2014/STRADS_NIPS14.pdf>`_, and implemented on top of the Strads scheduler. The documents are partitioned onto different machines, which take turns to sample disjoint subsets of words. By keeping the word subsets disjoint, our model-parallel implementation exhibits improved convergence times and memory utilization over data-parallel strategies. We use the sparse Gibbs sampling procedure in Yao et al (2009).
 
 Performance
 -----------
@@ -20,47 +18,39 @@ The Strads LDA app can train an LDA model with 1K topics, from a corpus with 8M 
 Quickstart
 -----------
 
-Petuum LDA uses the **Strads** scheduler, and can be found in `strads/apps/lda_release/`. **From this point on, all instructions will assume you are in `strads/apps/lda_release/`.** After building Strads (as explained under Installation), you may build the LDA app from `strads/apps/lda_release/` by running
-
-```
-make
-```
+Petuum LDA is implemented on Strads, and can be found in :code:`strads/apps/lda_release/`. From this point on, all instructions will assume you are in :code:`strads/apps/lda_release/`. After building Strads (as explained under Installation), you may build the LDA app from :code`strads/apps/lda_release/` by running
+::
+  make
 
 Test the app (on your local machine) by running
+::
+  ./run.py
 
-```
-./run.py
-```
-
-This will learn 1000 topics from a small subset of the NYtimes dataset, and output the word-topic and doc-topic tables to `tmplog/wt-mach-*` and `tmplog/dt-mach-*` respectively.
+This will learn 1000 topics from a small subset of the NYtimes dataset, and output the word-topic and doc-topic tables to :code:`tmplog/wt-mach-*` and `tmplog/dt-mach-*` respectively.
 
 Input data format
 -----------------
 
 The LDA app takes a single file as input, with the following format:
-
-```
-0 dummyword word-id word-id ...
-1 dummyword word-id word-id ...
-2 dummyword word-id word-id ...
-...
-```
+::
+  0 dummyword word-id word-id ...
+  1 dummyword word-id word-id ...
+  2 dummyword word-id word-id ...
+  ...
 
 **Caution: the input file must use UNIX line endings. Windows or Mac line endings will cause a crash.**
 
-Each line represents a single document: the first item is the document ID (0-indexed), followed by any character string (represented by `dummyword`), and finally a list of tokens in the document, each represented by its word ID.
+Each line represents a single document: the first item is the document ID (0-indexed), followed by any character string (represented by :code:`dummyword`), and finally a list of tokens in the document, each represented by its word ID.
 
 # Output format
 
-The LDA app outputs two types of files: word-topic tables `tmplog/wt-mach-*` and doc-topic tables `tmplog/dt-mach-*`. The word-topic tables use this format:
+The LDA app outputs two types of files: word-topic tables :code:`tmplog/wt-mach-*` and doc-topic tables :code:`tmplog/dt-mach-*`. The word-topic tables use this format:
+::
+  word-id, topic-id count, topic-id count, topic-id count ...
+  word-id, topic-id count, topic-id count, topic-id count ...
+  ...
 
-```
-word-id, topic-id count, topic-id count, topic-id count ...
-word-id, topic-id count, topic-id count, topic-id count ...
-...
-```
-
-Each line contains, for a particular word `word-id`, all the topics `topic-id` that word is seen in, and the number of times `count` that word is seen in each topic.
+Each line contains, for a particular word :code:`word-id`, all the topics `topic-id` that word is seen in, and the number of times `count` that word is seen in each topic.
 
 The doc-topic tables follow an identical format:
 
