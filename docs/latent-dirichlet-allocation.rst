@@ -80,6 +80,7 @@ The LDA app is launched using a python script, e.g. :code:`run.py` used earlier:
   os.system("mpirun -machinefile "+machfile[0]+" "+prog[0]+" --machfile "+machfile[0]+" -threads "+threads[0]+" -num_topic "+topics[0]+" -num_iter "+iterations[0]+" -data_file "+datafile[0]+" -logfile tmplog/1 -wtfile_pre tmplog/wt -dtfile_pre tmplog/dt ")
 
 The basic options are:
+
 * :code:`datafile`: Path to the data file, which must be visible to all machines. If using multiple machines, provide the full path to the data file.
 * :code:`topics`: How many topics to find.
 * :code:`iterations`: How many iterations to run.
