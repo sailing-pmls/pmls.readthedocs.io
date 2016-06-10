@@ -17,7 +17,6 @@ To install Bösen and Strads, please continue reading this manual. If you have a
 * [Configuration and Machine Files for Petuum Apps](configuration.md)
 * [Running on Hadoop clusters with YARN/HDFS](yarn-hdfs.md)
 * [Frequently Asked Questions](faq.md)
-    * [Bösen (C++ bounded-async key-value store)](https://github.com/petuum/bosen)
 
 ## Introduction to Petuum
 
