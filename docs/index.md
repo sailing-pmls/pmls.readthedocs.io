@@ -18,31 +18,31 @@ To install Bösen and Strads, please continue reading this manual. If you have a
     * [Running on Hadoop clusters with YARN/HDFS](yarn-hdfs.md)
     * [Frequently Asked Questions](faq.md)
 2. ML Applications
-    a. Topic Models
+    * Topic Models
         * [Latent Dirichlet Allocation (topic modeling)](latent-dirichlet-allocation.md)
         * [[MedLDA (supervised topic modeling)|MedLDA]]
-    b. Deep Learning
+    * Deep Learning
         * [[Poseidon: Distributed Deep Learning Framework on Petuum|https://github.com/petuum/poseidon/wiki]]
         * [[General-purpose Deep Neural Network (DNN)|General-purpose-Deep-Neural-Network-(DNN)]]
         * [[DNN for Speech Recognition|DNN-for-Speech-Recognition]]
-    c. Matrix Factorization and Sparse Coding
+    * Matrix Factorization and Sparse Coding
         * [[Matrix Factorization (collaborative filtering)|Matrix-Factorization]]
         * [[Non-negative Matrix Factorization (NMF)|Non-negative-Matrix-Factorization-(NMF)]]
         * [[Sparse Coding|Sparse-Coding]]
-    d. Regression
+    * Regression
         * [[Lasso Regression|Logistic-regression,-Lasso]]
-    e. Metric Learning
+    * Metric Learning
         * [[Distance Metric Learning|Distance-Metric-Learning]]
-    f. Clustering
+    * Clustering
         * [[K-means Clustering|Kmeans-Clustering]]
-    g. Classification
+    * Classification
         * [[Random Forest|Random-Forest]]
         * [[Logistic Regression|Logistic-regression,-Lasso]]
         * [[SVM|Support-Vector-Machine]] (Newly added in v1.1)
         * [[Multi-class Logistic Regression|Multi-class-Logistic-Regression]]
 3. Programming API
-    a. [[Bösen Bounded-Async Key-Value Store|Bosen-Bounded-Async-Key-Value-Store]]
-    b. [[Strads Model-Parallel Scheduler|STRADS-Model-Parallel-Scheduler]] (Coming soon)
+    * [[Bösen Bounded-Async Key-Value Store|Bosen-Bounded-Async-Key-Value-Store]]
+    * [[Strads Model-Parallel Scheduler|STRADS-Model-Parallel-Scheduler]] (Coming soon)
 
 # Introduction to Petuum
 
