@@ -1,4 +1,5 @@
 from recommonmark.parser import CommonMarkParser
+from recommonmark.transform import AutoStructify
 
 def setup(app):
   app.add_config_value('recommonmark_config', {
