@@ -13,36 +13,36 @@ To install Bösen and Strads, please continue reading this manual. If you have a
 # Petuum Bösen/Strads v1.1 manual
 
 1. [Quickstart](quickstart.md)
-    1. [Detailed Installation Instructions](installation.md)
-    2. [Configuration and Machine Files for Petuum Apps](configuration.md)
-    3. [Running on Hadoop clusters with YARN/HDFS](yarn-hdfs.md)
-    4. [Frequently Asked Questions](faq.md)
+    a. [Detailed Installation Instructions](installation.md)
+    b. [Configuration and Machine Files for Petuum Apps](configuration.md)
+    c. [Running on Hadoop clusters with YARN/HDFS](yarn-hdfs.md)
+    d. [Frequently Asked Questions](faq.md)
 2. ML Applications
-    1. Topic Models
-        1. [Latent Dirichlet Allocation (topic modeling)](latent-dirichlet-allocation.md)
-        2. [[MedLDA (supervised topic modeling)|MedLDA]]
-    2. Deep Learning
-        1. [[Poseidon: Distributed Deep Learning Framework on Petuum|https://github.com/petuum/poseidon/wiki]]
-        2. [[General-purpose Deep Neural Network (DNN)|General-purpose-Deep-Neural-Network-(DNN)]]
-        3. [[DNN for Speech Recognition|DNN-for-Speech-Recognition]]
-    3. Matrix Factorization and Sparse Coding
-        1. [[Matrix Factorization (collaborative filtering)|Matrix-Factorization]]
-        2. [[Non-negative Matrix Factorization (NMF)|Non-negative-Matrix-Factorization-(NMF)]]
-        2. [[Sparse Coding|Sparse-Coding]]
-    4. Regression
-        1. [[Lasso Regression|Logistic-regression,-Lasso]]
-    5. Metric Learning
-        1. [[Distance Metric Learning|Distance-Metric-Learning]]
-    6. Clustering
-        1. [[K-means Clustering|Kmeans-Clustering]]
-    7. Classification
-        1. [[Random Forest|Random-Forest]]
-        2. [[Logistic Regression|Logistic-regression,-Lasso]]
-        3. [[SVM|Support-Vector-Machine]] (Newly added in v1.1)
-        4. [[Multi-class Logistic Regression|Multi-class-Logistic-Regression]]
+    a. Topic Models
+        * [Latent Dirichlet Allocation (topic modeling)](latent-dirichlet-allocation.md)
+        * [[MedLDA (supervised topic modeling)|MedLDA]]
+    b. Deep Learning
+        * [[Poseidon: Distributed Deep Learning Framework on Petuum|https://github.com/petuum/poseidon/wiki]]
+        * [[General-purpose Deep Neural Network (DNN)|General-purpose-Deep-Neural-Network-(DNN)]]
+        * [[DNN for Speech Recognition|DNN-for-Speech-Recognition]]
+    c. Matrix Factorization and Sparse Coding
+        * [[Matrix Factorization (collaborative filtering)|Matrix-Factorization]]
+        * [[Non-negative Matrix Factorization (NMF)|Non-negative-Matrix-Factorization-(NMF)]]
+        * [[Sparse Coding|Sparse-Coding]]
+    d. Regression
+        * [[Lasso Regression|Logistic-regression,-Lasso]]
+    e. Metric Learning
+        * [[Distance Metric Learning|Distance-Metric-Learning]]
+    f. Clustering
+        * [[K-means Clustering|Kmeans-Clustering]]
+    g. Classification
+        * [[Random Forest|Random-Forest]]
+        * [[Logistic Regression|Logistic-regression,-Lasso]]
+        * [[SVM|Support-Vector-Machine]] (Newly added in v1.1)
+        * [[Multi-class Logistic Regression|Multi-class-Logistic-Regression]]
 3. Programming API
-    1. [[Bösen Bounded-Async Key-Value Store|Bosen-Bounded-Async-Key-Value-Store]]
-    2. [[Strads Model-Parallel Scheduler|STRADS-Model-Parallel-Scheduler]] (Coming soon)
+    a. [[Bösen Bounded-Async Key-Value Store|Bosen-Bounded-Async-Key-Value-Store]]
+    b. [[Strads Model-Parallel Scheduler|STRADS-Model-Parallel-Scheduler]] (Coming soon)
 
 # Introduction to Petuum
 
