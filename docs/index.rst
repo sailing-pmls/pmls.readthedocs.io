@@ -66,6 +66,9 @@ In addition to programming frameworks, Petuum includes many built-in distributed
 
 .. toctree::
    :maxdepth: 2
+   quickstart
+   latent-dirichlet-allocation
+   med-lda
 
 .. Indices and tables
 .. ==================
