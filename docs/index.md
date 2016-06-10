@@ -18,10 +18,10 @@ To install Bösen and Strads, please continue reading this manual. If you have a
     * [Running on Hadoop clusters with YARN/HDFS](yarn-hdfs.md)
     * [Frequently Asked Questions](faq.md)
 2. ML Applications
-    Topic Models
-        * [Latent Dirichlet Allocation (topic modeling)](latent-dirichlet-allocation.md)
-        * [MedLDA (supervised topic modeling)](med-lda.md)
-    Deep Learning
+    * Topic Models
+        - [Latent Dirichlet Allocation (topic modeling)](latent-dirichlet-allocation.md)
+        - [MedLDA (supervised topic modeling)](med-lda.md)
+    * Deep Learning
         * [Poseidon: Distributed Deep Learning Framework on Petuum](https://github.com/petuum/poseidon/wiki)
         * [General-purpose Deep Neural Network (DNN)](dnn-general.md)
         * [DNN for Speech Recognition](dnn-speech.md)
