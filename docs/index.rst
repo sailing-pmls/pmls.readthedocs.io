@@ -80,4 +80,4 @@ In addition to programming frameworks, Petuum includes many built-in distributed
 Test
 ====
 
-.. include med-lda.md
+.. include:: med-lda.md
