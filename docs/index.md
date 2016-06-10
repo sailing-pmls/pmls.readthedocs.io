@@ -19,7 +19,7 @@ To install Bösen and Strads, please continue reading this manual. If you have a
   1. [[Frequently Asked Questions|FAQ]]
 1. ML Applications
   1. Topic Models
-    1. [[Latent Dirichlet Allocation (topic modeling)|Latent-Dirichlet-Allocation]]
+    1. [[Latent Dirichlet Allocation (topic modeling)|latent-dirichlet-allocation]]
     1. [[MedLDA (supervised topic modeling)|MedLDA]]
   1. Deep Learning
     1. [[Poseidon: Distributed Deep Learning Framework on Petuum|https://github.com/petuum/poseidon/wiki]]
