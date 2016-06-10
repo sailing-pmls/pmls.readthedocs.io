@@ -1,4 +1,4 @@
-## Frequently asked questions
+# Frequently asked questions
 
 **Q: What does "Petuum" mean?**
 
