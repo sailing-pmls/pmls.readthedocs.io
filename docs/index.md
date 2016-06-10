@@ -10,14 +10,6 @@ The Petuum project is organized into 4 open-source (BSD 3-clause license) Github
 
 To install Bösen and Strads, please continue reading this manual. If you have a Java environment and want to use JBösen, please start [here](https://github.com/petuum/jbosen/wiki). If you wish to use Poseidon for Deep Learning, please go [here](https://github.com/petuum/poseidon/wiki).
 
-## Contents
-
-* [Quickstart](quickstart.md)
-* [Detailed Installation Instructions](installation.md)
-* [Configuration and Machine Files for Petuum Apps](configuration.md)
-* [Running on Hadoop clusters with YARN/HDFS](yarn-hdfs.md)
-* [Frequently Asked Questions](faq.md)
-
 ## Introduction to Petuum
 
 Petuum is a distributed machine learning framework. It takes care of the difficult system "plumbing work", allowing you to focus on the ML. Petuum runs efficiently at scale on research clusters and cloud compute like Amazon EC2 and Google GCE.
