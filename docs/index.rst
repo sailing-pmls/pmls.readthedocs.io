@@ -76,3 +76,8 @@ In addition to programming frameworks, Petuum includes many built-in distributed
 .. * :ref:`genindex`
 .. * :ref:`modindex`
 .. * :ref:`search`
+
+Test
+====
+
+.. include med-lda.md
