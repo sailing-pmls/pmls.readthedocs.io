@@ -1,4 +1,6 @@
-# Make sure password-less SSH is set up correctly
+# Configuration
+
+## Make sure password-less SSH is set up correctly
 
 This is the most common issue people have when running Petuum. Please read!
 
@@ -6,13 +8,13 @@ This is the most common issue people have when running Petuum. Please read!
 
 **Hence, you will save yourself a lot of trouble by taking the time to ensure password-less `ssh` actually works, before you attempt to run the Petuum apps.** For example, if you are going to run Petuum on your local machine, make sure that `ssh 127.0.0.1` logs you in without asking for a password. See [[Installing Petuum|Installation]] for instructions on how to do this.
 
-# Bösen and Strads
+## Bösen and Strads
 
 Petuum includes two platforms for writing and running ML applications: Bösen for data-parallel execution, and Strads for model-parallel execution. Each Petuum ready-to-run application is either a Bösen application, or a Strads application. The two systems use different machine configuration files; please see the following guides.
 
 **Note: This page explains machine configuration for non-YARN, stand-alone operation. If you are looking to run Petuum on YARN, please see [[this page|https://github.com/petuum/bosen/wiki/Running-on-YARN-HDFS]].**
 
-# Bösen configuration files
+## Bösen configuration files
 
 Some Petuum ML applications require Bösen configuration files, in the following format:
 
@@ -62,7 +64,7 @@ If you want to simultaneously run two Petuum apps on the same machines, make sur
 
 If you cannot run an app - especially if you see error messages with “Check failure stack trace” - the cause is probably another running (or hung) Petuum app using the same ports. In that case, you should use the offending app's kill script to terminate it.
 
-# Strads configuration files
+## Strads configuration files
 
 Some Petuum ML applications require Strads machine configuration files, which are simply a list of machine IP addresses (like an MPI hostfile). Unlike Bösen configuration files, Strads configuration files may repeat IP addresses.
 
