@@ -20,26 +20,26 @@ To install Bösen and Strads, please continue reading this manual. If you have a
 2. ML Applications
     * Topic Models
         * [Latent Dirichlet Allocation (topic modeling)](latent-dirichlet-allocation.md)
-        * [[MedLDA (supervised topic modeling)|MedLDA]]
+        * [MedLDA (supervised topic modeling)](med-lda.md)
     * Deep Learning
-        * [[Poseidon: Distributed Deep Learning Framework on Petuum|https://github.com/petuum/poseidon/wiki]]
-        * [[General-purpose Deep Neural Network (DNN)|General-purpose-Deep-Neural-Network-(DNN)]]
-        * [[DNN for Speech Recognition|DNN-for-Speech-Recognition]]
+        * [Poseidon: Distributed Deep Learning Framework on Petuum](https://github.com/petuum/poseidon/wiki)
+        * [General-purpose Deep Neural Network (DNN)](dnn-general.md)
+        * [DNN for Speech Recognition](dnn-speech.md)
     * Matrix Factorization and Sparse Coding
-        * [[Matrix Factorization (collaborative filtering)|Matrix-Factorization]]
-        * [[Non-negative Matrix Factorization (NMF)|Non-negative-Matrix-Factorization-(NMF)]]
-        * [[Sparse Coding|Sparse-Coding]]
+        * [Matrix Factorization (collaborative filtering)](matrix-fact.md)
+        * [Non-negative Matrix Factorization (NMF)](nonneg-matrix-fact.md)
+        * [Sparse Coding](sparse-coding.md)
     * Regression
-        * [[Lasso Regression|Logistic-regression,-Lasso]]
+        * [Lasso Regression](lasso-and-lr.md)
     * Metric Learning
-        * [[Distance Metric Learning|Distance-Metric-Learning]]
+        * [Distance Metric Learning](distance-metric-learning.md)
     * Clustering
-        * [[K-means Clustering|Kmeans-Clustering]]
+        * [K-means Clustering](k-means.md)
     * Classification
-        * [[Random Forest|Random-Forest]]
-        * [[Logistic Regression|Logistic-regression,-Lasso]]
-        * [[SVM|Support-Vector-Machine]] (Newly added in v1.1)
-        * [[Multi-class Logistic Regression|Multi-class-Logistic-Regression]]
+        * [Random Forest](random-forest.md)
+        * [Logistic Regression](lasso-and-lr.md)
+        * [Support vector machine](support-vector-machine.md)
+        * [Multi-class Logistic Regression](multiclass-logistic-regression)
 3. Programming API
     * [[Bösen Bounded-Async Key-Value Store|Bosen-Bounded-Async-Key-Value-Store]]
     * [[Strads Model-Parallel Scheduler|STRADS-Model-Parallel-Scheduler]] (Coming soon)
