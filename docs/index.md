@@ -10,18 +10,15 @@ The Petuum project is organized into 4 open-source (BSD 3-clause license) Github
 
 To install Bösen and Strads, please continue reading this manual. If you have a Java environment and want to use JBösen, please start [here](https://github.com/petuum/jbosen/wiki). If you wish to use Poseidon for Deep Learning, please go [here](https://github.com/petuum/poseidon/wiki).
 
-```eval_rst
-.. toctree::
-   :maxdepth: 2
-
-   quickstart
-   installation
-   configuration
-   yarn-hdfs
-   faq
-```
 Contents
 --------
+* [Quickstart](quickstart.md)
+* [Detailed Installation Instructions](installation.md)
+* [Configuration and Machine Files for Petuum Apps](configuration.md)
+* [Running on Hadoop clusters with YARN/HDFS](yarn-hdfs.md)
+* [Frequently Asked Questions](faq.md)
+
+
 * [Quickstart](quickstart.md)
     * [Detailed Installation Instructions](installation.md)
     * [Configuration and Machine Files for Petuum Apps](configuration.md)
