@@ -18,12 +18,12 @@ The Strads LDA app can train an LDA model with 1K topics, from a corpus with 8M 
 Quickstart
 -----------
 
-Petuum LDA is implemented on Strads, and can be found in `strads/apps/lda_release/`. From this point on, all instructions will assume you are in `strads/apps/lda_release/`. After building Strads (as explained under Installation), you may build the LDA app from `strads/apps/lda_release/` by running
-
+Petuum LDA is implemented on Strads, and can be found in ::`strads/apps/lda_release/`. From this point on, all instructions will assume you are in `strads/apps/lda_release/`. After building Strads (as explained under Installation), you may build the LDA app from `strads/apps/lda_release/` by running
+::
   make
 
 Test the app (on your local machine) by running
-
+::
   ./run.py
 
 This will learn 1000 topics from a small subset of the NYtimes dataset, and output the word-topic and doc-topic tables to :code:`tmplog/wt-mach-*` and `tmplog/dt-mach-*` respectively.
