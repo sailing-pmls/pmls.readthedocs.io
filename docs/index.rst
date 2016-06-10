@@ -26,38 +26,38 @@ In addition to programming frameworks, Petuum includes many built-in distributed
 
 1. Topic Models
    
-   * :doc:`Latent Dirichlet allocation (topic modeling) <latent-dirichlet-allocation>`
-   * MedLDA (supervised topic modeling)
+   * :doc:`Latent Dirichlet allocation <latent-dirichlet-allocation>`
+   * :doc:`MedLDA <med-lda>`
 
 2. Deep Learning
    
-   * General-purpose deep neural network
-   * DNN for speech recognition
+   * :doc:`General-purpose deep neural network <dnn-general>`
+   * :doc:`DNN for speech recognition <dnn-speech>`
 
 3. Matrix factorization and sparse coding
 
-   * Matrix factorization
-   * Non-negative matrix factorization
-   * Sparse coding
+   * :doc:`Matrix factorization <matrix-fact>`
+   * :doc:`Non-negative matrix factorization <nonneg-matrix-fact>`
+   * :doc:`Sparse coding <sparse-coding>`
 
 4. Regression
 
-   * Lasso regression
+   * :doc:`Lasso regression <lasso-and-lr>`
 
 5. Metric learning
  
-   * Distance metric learning
+   * :doc:`Distance metric learning <distance-metric-learning>`
 
 6. Clustering
  
-   * K-means clustering
+   * :doc:`K-means clustering <k-means>`
 
 7. Classification
  
-   * Random forest
-   * Logistic regression
-   * Support-vector machine
-   * Multi-class logistic regression
+   * :doc:`Random forest <random-forest>`
+   * :doc:`Logistic regression <lasso-and-lr>`
+   * :doc:`Support vector machine <support-vector-machine>`
+   * :doc:`Multi-class logistic regression <multiclass-logistic-regression>`
 
 .. Welcome to Petuum's documentation!
 .. ==================================
