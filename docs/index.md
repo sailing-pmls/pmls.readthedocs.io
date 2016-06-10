@@ -14,6 +14,7 @@ To install Bösen and Strads, please continue reading this manual. If you have a
 .. toctree::
    :maxdepth: 2
 
+   index
    quickstart
    installation
    configuration
