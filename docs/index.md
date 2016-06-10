@@ -12,15 +12,15 @@ To install Bösen and Strads, please continue reading this manual. If you have a
 
 Contents
 --------
-1. [Quickstart](quickstart.md)
+* [Quickstart](quickstart.md)
     * [Detailed Installation Instructions](installation.md)
     * [Configuration and Machine Files for Petuum Apps](configuration.md)
     * [Running on Hadoop clusters with YARN/HDFS](yarn-hdfs.md)
     * [Frequently Asked Questions](faq.md)
-2. ML Applications
+* ML Applications
     * Topic Models
-        - [Latent Dirichlet Allocation (topic modeling)](latent-dirichlet-allocation.md)
-        - [MedLDA (supervised topic modeling)](med-lda.md)
+        * [Latent Dirichlet Allocation (topic modeling)](latent-dirichlet-allocation.md)
+        * [MedLDA (supervised topic modeling)](med-lda.md)
     * Deep Learning
         * [Poseidon: Distributed Deep Learning Framework on Petuum](https://github.com/petuum/poseidon/wiki)
         * [General-purpose Deep Neural Network (DNN)](dnn-general.md)
@@ -40,7 +40,7 @@ Contents
         * [Logistic Regression](lasso-and-lr.md)
         * [Support vector machine](support-vector-machine.md)
         * [Multi-class Logistic Regression](multiclass-logistic-regression)
-3. Programming API
+* Programming API
     * [[Bösen Bounded-Async Key-Value Store|Bosen-Bounded-Async-Key-Value-Store]]
     * [[Strads Model-Parallel Scheduler|STRADS-Model-Parallel-Scheduler]] (Coming soon)
 
