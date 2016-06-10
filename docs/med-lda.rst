@@ -32,7 +32,7 @@ This application takes inputs in LIBSVM format:
 
 For instance, :code:`21 5 cogito:1 sum:1 ergo:1` represents a short document :code:`Cogito ergo sum` labeled as 21 and 5. Note that :code:`<word>` is considered as a string while :code:`<label>` should be an integer in :code:`[0, num_label)`.
 
-We included a toy data set `20newsgroups <http://qwone.com/~jason/20Newsgroups/>` under the app directory for demo purpose. If you type
+We included a toy data set `20newsgroups <http://qwone.com/~jason/20Newsgroups/>`_ under the app directory for demo purpose. If you type
 ::
   wc -l 20news.{train,test}
 
