@@ -1,5 +1,6 @@
-## Contents
+# Contents
 
+* [Overview](index.md)
 * [Quickstart](quickstart.md)
 * [Detailed Installation Instructions](installation.md)
 * [Configuration and Machine Files for Petuum Apps](configuration.md)
