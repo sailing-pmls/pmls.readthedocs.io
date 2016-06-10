@@ -58,7 +58,7 @@ make
 
 The list of supported apps, as well as instructions on how to run them, can be found below.
 
-# Which applications are supported?
+## Which applications are supported?
 
 The following Bösen apps have YARN+HDFS support:
 
@@ -74,9 +74,9 @@ Please refer to the respective wiki pages for running instructions. **Note that 
 
 YARN/HDFS support for Strads will be coming in a future update.
 
-# Troubleshooting
+## Troubleshooting
 
-## Running out of virtual memory when using YARN
+### Running out of virtual memory when using YARN
 
 If you are running out of virtual memory when launching Petuum apps via YARN, you may need to edit `$HADOOP_CONF_DIR/yarn-site.xml` in order to increase the maximum amount of virtual memory that can be allocated to containers. Search for the lines
 
