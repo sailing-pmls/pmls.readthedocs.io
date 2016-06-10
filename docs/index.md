@@ -10,48 +10,15 @@ The Petuum project is organized into 4 open-source (BSD 3-clause license) Github
 
 To install Bösen and Strads, please continue reading this manual. If you have a Java environment and want to use JBösen, please start [here](https://github.com/petuum/jbosen/wiki). If you wish to use Poseidon for Deep Learning, please go [here](https://github.com/petuum/poseidon/wiki).
 
-Contents
---------
+## Contents
+
 * [Quickstart](quickstart.md)
 * [Detailed Installation Instructions](installation.md)
 * [Configuration and Machine Files for Petuum Apps](configuration.md)
 * [Running on Hadoop clusters with YARN/HDFS](yarn-hdfs.md)
 * [Frequently Asked Questions](faq.md)
 
-
-* [Quickstart](quickstart.md)
-    * [Detailed Installation Instructions](installation.md)
-    * [Configuration and Machine Files for Petuum Apps](configuration.md)
-    * [Running on Hadoop clusters with YARN/HDFS](yarn-hdfs.md)
-    * [Frequently Asked Questions](faq.md)
-* ML Applications
-    * Topic Models
-        * [Latent Dirichlet Allocation (topic modeling)](latent-dirichlet-allocation.md)
-        * [MedLDA (supervised topic modeling)](med-lda.md)
-    * Deep Learning
-        * [Poseidon: Distributed Deep Learning Framework on Petuum](https://github.com/petuum/poseidon/wiki)
-        * [General-purpose Deep Neural Network (DNN)](dnn-general.md)
-        * [DNN for Speech Recognition](dnn-speech.md)
-    * Matrix Factorization and Sparse Coding
-        * [Matrix Factorization (collaborative filtering)](matrix-fact.md)
-        * [Non-negative Matrix Factorization (NMF)](nonneg-matrix-fact.md)
-        * [Sparse Coding](sparse-coding.md)
-    * Regression
-        * [Lasso Regression](lasso-and-lr.md)
-    * Metric Learning
-        * [Distance Metric Learning](distance-metric-learning.md)
-    * Clustering
-        * [K-means Clustering](k-means.md)
-    * Classification
-        * [Random Forest](random-forest.md)
-        * [Logistic Regression](lasso-and-lr.md)
-        * [Support vector machine](support-vector-machine.md)
-        * [Multi-class Logistic Regression](multiclass-logistic-regression)
-* Programming API
-    * [[Bösen Bounded-Async Key-Value Store|Bosen-Bounded-Async-Key-Value-Store]]
-    * [[Strads Model-Parallel Scheduler|STRADS-Model-Parallel-Scheduler]] (Coming soon)
-
-# Introduction to Petuum
+## Introduction to Petuum
 
 Petuum is a distributed machine learning framework. It takes care of the difficult system "plumbing work", allowing you to focus on the ML. Petuum runs efficiently at scale on research clusters and cloud compute like Amazon EC2 and Google GCE.
 
