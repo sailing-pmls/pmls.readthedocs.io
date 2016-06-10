@@ -26,7 +26,7 @@ In addition to programming frameworks, Petuum includes many built-in distributed
 
 1. Topic Models
    
-   * Latent Dirichlet allocation (topic modeling)
+   * :doc:`Latent Dirichlet allocation (topic modeling) <latent-dirichlet-allocation>`
    * MedLDA (supervised topic modeling)
 
 2. Deep Learning
