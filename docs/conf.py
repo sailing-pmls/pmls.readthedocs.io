@@ -2,9 +2,10 @@ import recommonmark
 from recommonmark.parser import CommonMarkParser
 from recommonmark.transform import AutoStructify
 
+github_doc_root = 'https://github.com/rtfd/recommonmark/tree/master/doc/'
 def setup(app):
   app.add_config_value('recommonmark_config', {
-    'auto_doc_ref': True,
+    'url_resolver': lambda url: github_doc_root + url,
     'auto_toc_tree_section': 'Contents',
   }, True)
   app.add_transform(AutoStructify)
