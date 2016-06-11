@@ -6,7 +6,8 @@ docs_petuum_root = 'http://docs.petuum.com/en/latest/'
 def setup(app):
   app.add_config_value('recommonmark_config', {
     'url_resolver': lambda url: docs_petuum_root + url,
-    'auto_toc_tree_section': 'Contents',
+    'enable_auto_toc_tree': False,
+#    'auto_toc_tree_section': 'Contents',
   }, True)
   app.add_transform(AutoStructify)
 
