@@ -1,4 +1,4 @@
-```eval-rst
+```eval_rst
 .. toctree:
    :hidden:
    :maxdepth: 2
