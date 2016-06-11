@@ -2,8 +2,10 @@
 
 ```eval_rst
 .. toctree::
+   :hidden:
    :maxdepth: 2
    
+   self
    quickstart
    installation
    configuration
