@@ -1,5 +1,3 @@
-# Overview
-
 ```eval_rst
 .. toctree::
    :hidden:
@@ -12,6 +10,8 @@
    yarn-hdfs
    faq
 ```
+
+# Overview
 
 Petuum is a distributed machine learning framework. It takes care of the difficult system "plumbing work", allowing you to focus on the ML. Petuum runs efficiently at scale on research clusters and cloud compute like Amazon EC2 and Google GCE.
 
