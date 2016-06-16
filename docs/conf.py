@@ -63,8 +63,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Petuum'
-copyright = u'2016, Petuum, Inc'
-author = u'Petuum, Inc.'
+copyright = u'2016, Carnegie Mellon University'
+author = u'Petuum'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
