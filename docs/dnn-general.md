@@ -1,7 +1,7 @@
 # Deep Neural Network
 This app implements a fully-connected Deep Neural Network (DNN) for multi-class classification, on **Bösen**. The DNN consists of an input layer, arbitrary number of hidden layers and an output layer. Each layer contains a certain amount of neuron units. Each unit in the input layer corresponds to an element in the feature vector. We represent the class label using 1-of-K coding and each unit in the output layer corresponds to a class label. The number of hidden layers and the number of units in each hidden layer are configured by the users. Units between adjacent layers are fully connected. In terms of DNN learning, we use the cross entropy loss and stochastic gradient descent where the gradient is computed using backpropagation method.
 
-### Performance
+## Performance
 
 On a dataset with 1M data instances; 360 feature dimension; 24M parameters, the Bösen DNN implementation converges in approximately 45 minutes, using 6 machines (16 cores each).
 
@@ -9,7 +9,7 @@ On a dataset with 1M data instances; 360 feature dimension; 24M parameters, the 
 
 Going from 1 to 6 machines results in a speedup of roughly 4.1x.
 
-# Quick start
+## Quick start
 The DNN app can be found in `bosen/app/dnn`. From this point on, all instructions will assume you are in `bosen/app/dnn`. After building Petuum (as explained earlier in this manual), you can build the DNN app from `bosen/app/dnn` by running
 ```
 make
@@ -35,7 +35,7 @@ datasets/biases.txt
 ```
 `weights.txt` saves the weight matrices. The order is: weight matrix between layer 1 (input layer) and layer 2 (the first hidden layer), weight matrix between layer 2 and layer 3, etc. All matrices are saved in row major order and each line corresponds to a row.
 
-### Making predictions
+## Making predictions
 Change `app_dir` in `script/predict.py`; see example below. You need to provide the full path to the DNN directory.
 
 ```
@@ -48,7 +48,7 @@ You can now make predictions with the learned model using
 ```
 After the app terminates, you should get a prediction result file for each of the input data file. Please check the directory where you put the data files. Each line of the prediction result file contains the prediction for the corresponding data.
 
-# Input data format
+## Input data format
 We assume users have partitioned the data into M pieces, where M is the total number of clients (machines). Each client will be in charge of one piece. User needs to provide a file recording the data partition information. In this file, each line corresponds to one data partition. The format of each line is
 ```
 <data_file> \t <num_data_in_partition>
@@ -60,7 +60,7 @@ We assume users have partitioned the data into M pieces, where M is the total nu
 ```
 Elements in the feature vector are separated with single blank. Note that class label starts from 0. If there are K classes, the range of class labels are `[0,1,...,K-1]`.
 
-# Creating synthetic data
+## Creating synthetic data
 
 We provide a synthetic data generator for testing purposes. The generator generates random data and automatically partitions the data into different files. To see detailed instructions, run
 ```
@@ -91,7 +91,7 @@ It will generate a dataset where the number of training examples is 10000, featu
 ```
 Each line corresponds to one data partition and contains the data file of this partition and number of data points in this partition. Note that the path of data file must be an absolute path.
 
-# Running the Deep Neural Network Application
+## Running the Deep Neural Network Application
 Parameters of the DNN training are specified in `script/run_local.py`, including:
 - `<num_worker_threads>`: how many worker threads to use in each machine
 - `<staleness>`: staleness value
@@ -125,7 +125,7 @@ After configuring these parameters, perform prediction by:
 ./script/launch_pred.py
 ```
 
-# Format of DNN Configuration File
+## Format of DNN Configuration File
 
 The DNN configurations are stored in <parameter_file>. Each line corresponds to a parameter and its format is
 ```
@@ -155,7 +155,7 @@ num_smp_evaluate: 2000
 num_iters_evaluate: 100
 ```
 
-# Terminating the DNN app
+## Terminating the DNN app
 The DNN app runs in the background, and outputs its progress to stdout. If you need to terminate the app before it finishes, run
 ```
 ./script/kill.py <petuum_ps_hostfile>
