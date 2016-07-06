@@ -1,7 +1,7 @@
 # K-Means Clustering
 K-means is a clustering algorithm, which identifies cluster centers based on Euclidean distances. Our K-Means app on **Bösen** uses the Mini-Batch K-means algorithm [1].
 
-# Quick Start
+## Quick Start
 The app can be found at `bosen/app/kmeans`. From this point on, all instructions will assume you are at `bosen/app/kmeans`. After building the main Petuum libraries, you can build kmeans:
 
 ```
@@ -20,7 +20,7 @@ chmod +x script/launch.py
 
 The last command runs kmeans using the provided sample dataset `dataset/sample.txt` and output the found centers in `output/out.centers` and the cluster assignments in `output/out.assignmentX.txt` where `X` is the worker ID (each worker outputs cluster assignments in its partition).
 
-# Use HDFS
+## Use HDFS
 
 Kmeans supports HDFS read and output. You need to build Bösen with `HAS_HDFS = -DHAS_HADOOP` in `bosen/defns.mk`. See the [YARN/HDFS page](yarn-hdfs.md) for detailed instructions.
 
@@ -64,7 +64,7 @@ Then launch it as before:
 hadoop fs -ls /path/to/data/out*
 ```
 
-# Use Yarn
+## Use Yarn
 
 We will launch job through Yarn and read/output to HDFS. Make sure you've built Yarn by running `gradle build` under `bosen/src/yarn` and have HDFS enabled in `bosen/defns.mk` like before.
 
