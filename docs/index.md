@@ -28,35 +28,35 @@ To install Bösen and Strads, please continue reading this manual. If you have a
 1. [Quickstart](quickstart.md)
   1. [Detailed Installation Instructions](installation.md)
   1. [Configuration and Machine Files for Petuum Apps](configuration.md)
-  1. [[Running on Hadoop clusters with YARN/HDFS|Running-on-YARN-HDFS]]
-  1. [[Frequently Asked Questions|FAQ]]
+  1. [Running on Hadoop clusters with YARN/HDFS](yarn-hdfs.md)
+  1. [Frequently Asked Questions](faq.md)
 1. ML Applications
   1. Topic Models
-    1. [[Latent Dirichlet Allocation (topic modeling)|Latent-Dirichlet-Allocation]]
-    1. [[MedLDA (supervised topic modeling)|MedLDA]]
+    1. [Latent Dirichlet Allocation (topic modeling)](latent-dirichlet-allocation.md)
+    1. [MedLDA (supervised topic modeling)](med-lda.md)
   1. Deep Learning
-    1. [[Poseidon: Distributed Deep Learning Framework on Petuum|https://github.com/petuum/poseidon/wiki]]
-    1. [[General-purpose Deep Neural Network (DNN)|General-purpose-Deep-Neural-Network-(DNN)]]
-      1. [[DNN for Speech Recognition|DNN-for-Speech-Recognition]]
+    1. [Poseidon: Distributed Deep Learning Framework on Petuum](https://github.com/petuum/poseidon/wiki)
+    1. [General-purpose Deep Neural Network (DNN)](dnn-general.md)
+      1. [DNN for Speech Recognition](dnn-speech.md)
   1. Matrix Factorization and Sparse Coding
-    1. [[Matrix Factorization (collaborative filtering)|Matrix-Factorization]]
-    1. [[Non-negative Matrix Factorization (NMF)|Non-negative-Matrix-Factorization-(NMF)]]
-    1. [[Sparse Coding|Sparse-Coding]]
+    1. [Matrix Factorization (collaborative filtering)](matrix-fact.md)
+    1. [Non-negative Matrix Factorization (NMF)](nonneg-matrix-fact.md)
+    1. [Sparse Coding](sparse-coding.md)
   1. Regression
-    1. [[Lasso Regression|Logistic-regression,-Lasso]]
+    1. [Lasso Regression](lasso-and-lr.md)
   1. Metric Learning
-    1. [[Distance Metric Learning|Distance-Metric-Learning]]
+    1. [Distance Metric Learning](distance-metric-learning.md)
   1. Clustering
-    1. [[K-means Clustering|Kmeans-Clustering]]
+    1. [K-means Clustering](k-means.md)
   1. Classification
-    1. [[Random Forest|Random-Forest]]
-    1. [[Logistic Regression|Logistic-regression,-Lasso]]
-    1. [[SVM|Support-Vector-Machine]] (Newly added in v1.1)
-    1. [[Multi-class Logistic Regression|Multi-class-Logistic-Regression]]
+    1. [Random Forest](random-forest.md)
+    1. [Logistic Regression](lasso-lr.md)
+    1. [SVM](support-vector-machine.md) (Newly added in v1.1)
+    1. [Multi-class Logistic Regression](multiclass-logistic-regression.md)
     
 1. Programming API
-  1. [[Bösen Bounded-Async Key-Value Store|Bosen-Bounded-Async-Key-Value-Store]]
-  1. [[Strads Model-Parallel Scheduler|STRADS-Model-Parallel-Scheduler]] (Coming soon)
+  1. [Bösen Bounded-Async Key-Value Store](Bosen-Bounded-Async-Key-Value-Store)
+  1. [Strads Model-Parallel Scheduler](STRADS-Model-Parallel-Scheduler) (Coming soon)
 
 ## Introduction to Petuum
 
