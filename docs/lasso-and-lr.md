@@ -25,7 +25,7 @@ The logistic regression app on Strads can solve a 10M-dimensional sparse problem
 
 # Input data format
 
-The Lasso/LR apps use the [[MatrixMarket format|http://math.nist.gov/MatrixMarket/formats.html]]:
+The Lasso/LR apps use the [MatrixMarket format](http://math.nist.gov/MatrixMarket/formats.html):
 
 ```
 %%MatrixMarket matrix coordinate real general
