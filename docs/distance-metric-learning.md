@@ -4,7 +4,7 @@ This app implements Distance Metric Learning (DML) as proposed in [1], on **Bös
 
 [1] Eric P. Xing, Michael I. Jordan, Stuart Russell, and Andrew Y. Ng. "Distance metric learning with application to clustering with side-information." In Advances in neural information processing systems, pp. 505-512. 2002.
 
-### Performance
+## Performance
 
 On a dataset with 1M data instances; 22K feature dimension; 22M parameters, the Bösen DML implementation converges in approximately 15 minutes, using 4 machines (64 cores each).
 
@@ -12,7 +12,7 @@ On a dataset with 1M data instances; 22K feature dimension; 22M parameters, the 
 
 Going from 1 to 4 machines results in a speedup of roughly 3.75x.
 
-# Quick start
+## Quick start
 
 The DML app can be found in `bosen/app/dml/`. **From this point on, all instructions will assume you are in `bosen/app/dml/`.** After building Petuum (as explained earlier in this manual), you can build the DML app from `bosen/app/dml` by running
 
@@ -50,7 +50,7 @@ datasets/dismat.txt
 `dismat.txt` saves the distance matrix in row major order and each line corresponds to a row.
 
 
-# Running the Distance Metric Learning Application
+## Running the Distance Metric Learning Application
 
 Parameters of the DML app are specified in `script/run_local.py`, including:
 * `<num_worker_threads>`: how many worker threads to use in each machine
