@@ -148,7 +148,7 @@ There are many parameters involved for running Sparse Coding. We provide default
 
 After all parameters have been chosen appropriately, use the command `./script/run_local.py`, then Sparse Coding application will run in background. The results will be put as specified in `output_dirname`. Matrix `B` will be stored in `B.txt` in client 0 (whose ip appears in the first line in hostfile). Matrix `S` will be stored in a row-partitioned manner, i.e., client i will have a `S.txt.i` in `output_dirname`, and the whole matrix `S` can be obtained by putting all `S.txt.i` together, which will be explained in [Data partitioning](#data-partitioning).
 
-### Terminating the Sparse Coding app
+## Terminating the Sparse Coding app
 
 The Sparse Coding app runs in the background, and outputs its progress to log files in user-specified directory. If you need to terminate the app before it finishes, just run
 
@@ -156,7 +156,7 @@ The Sparse Coding app runs in the background, and outputs its progress to log fi
 ./script/kill.py <petuum_ps_hostfile>
 ```
 
-### Data partitioning
+## Data partitioning
 
 If there are multiple machines in host file, each machine will only take a part of input matrix. Concretely, if there are `num_client` clients, client i will read the j-th row of `X` if j mod `num_client`=i. For example, if the data matrix `X` is:
 
