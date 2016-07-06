@@ -8,11 +8,11 @@ MF is commonly used to perform Collaborative Filtering, where `A` represents the
 
 The Petuum MF app uses a model-parallel coordinate descent scheme, implemented on the Strads scheduler. If you would like to use the older Bösen-based Petuum MF app, you may obtain it from the [Petuum v0.93 release](https://github.com/petuum/bosen/tree/v0.9.3).
 
-### Performance 
+## Performance 
 
 The Strads MF app finishes training on the Netflix dataset (480k by 20k matrix) with rank=40 in 2 minutes, using 25 machines (16 cores each).
 
-# Quick start
+## Quick start
 
 Petuum MF uses the Strads scheduler, and can be found in `src/strads/apps/cdmf_release/`. **From this point on, all instructions will assume you are in `src/strads/apps/cdmf_release/`.** After building the main Petuum libraries (as explained under Installation), you may build the MF app from `src/strads/apps/cdmf_release/` by running
 
@@ -28,7 +28,7 @@ Test the app (on your local machine) by running
 
 This will perform a rank K=40 decomposition on a synthetic 10k-by-10k matrix, and output the factors `W` and `H` to `tmplog/wfile-mach-*` and `tmplog/hfile-mach-*` respectively.
 
-# Input data format
+## Input data format
 
 The MF app uses the [MatrixMarket format](http://math.nist.gov/MatrixMarket/formats.html):
 
@@ -42,7 +42,7 @@ row col value
 
 The first line is the MatrixMarket header, and should be copied as-is. The second line gives the number of rows N, columns M, and non-zero entries in the matrix. This is followed by `num_nonzeros` lines, each representing a single matrix entry `A(row,col) = value` (where `row` and `col` are 0-indexed).
 
-# Output format
+## Output format
 
 The MF app outputs `W` and `H` to `tmplog/wfile-mach-*` and `tmplog/hfile-mach-*` respectively. The `W` files have the following format:
 
@@ -64,7 +64,7 @@ col-id: value-0 value-1 ... value-(K-1)
 
 The number of files `wfile-mach-*` and `hfile-mach-*` depends on the number of worker processes used --- see the next section for more information.
 
-# Program options
+## Program options
 
 The MF app is launched using a python script, e.g. `run.py` used earlier:
 
