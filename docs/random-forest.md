@@ -2,7 +2,7 @@
 A [Random Forest] is a classification algorithm that uses a large number of decision trees. Our Random Forest app is implemented on **Bösen**, using [C4.5] to learn the trees.
 
 
-# Quick Start
+## Quick Start
 
 Random Forest can be found in `bosen/app/rand_forest`. From this point on, all instructions will assume you are in `bosen/app/rand_forest`.  After building the main Petuum libraries (as explained earlier in this manual), you can build the Rand Forest app from `bosen/app/rand_forest` by running
 
@@ -44,7 +44,7 @@ I0702 03:30:22.321923 18392 rand_forest_main.cpp:158] Rand Forest finished and s
 
 The results are saved to `output/`.
 
-# Use HDFS
+## Use HDFS
 
 Random Forest supports HDFS read and output. You need to build Bösen with `HAS_HDFS = -DHAS_HADOOP` in `bosen/defns.mk`. See the [YARN/HDFS page](yarn-hdfs.md) for detailed instructions.
 
@@ -89,7 +89,7 @@ Then launch it as before:
 hadoop fs -ls /path/to/data/
 ```
 
-# Use Yarn
+## Use Yarn
 
 We will launch job through Yarn and read/output to HDFS. Make sure you've built Yarn by running `gradle build` under `bosen/src/yarn` and have HDFS enabled in `bosen/defns.mk` like before.
 
