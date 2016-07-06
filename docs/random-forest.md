@@ -46,7 +46,7 @@ The results are saved to `output/`.
 
 # Use HDFS
 
-Random Forest supports HDFS read and output. You need to build Bösen with `HAS_HDFS = -DHAS_HADOOP` in `bosen/defns.mk`. See the [[YARN/HDFS page|Running-on-YARN-HDFS]] for detailed instructions.
+Random Forest supports HDFS read and output. You need to build Bösen with `HAS_HDFS = -DHAS_HADOOP` in `bosen/defns.mk`. See the [YARN/HDFS page](yarn-hdfs.md) for detailed instructions.
 
 Rebuild the binary if you rebuilt the library with Hadoop enabled (under `bosen/app/rand_forest`):
 
@@ -136,7 +136,7 @@ The ip addresses and ports of all the machines used should be included in the ho
     2 192.168.1.3 10000
     ...
 
-See this [[page|Configuration-Files-for-Petuum-Apps]] for more details.
+See this [page](configuration.md) for more details.
 
 ## Common parameters
 All of the parameters required for running the application can be seen and changed in the sample script `script/launch.py.template`.
