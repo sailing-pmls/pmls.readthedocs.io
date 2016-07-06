@@ -53,7 +53,7 @@ The numbers will be slightly different as it's executed indeterministically with
 
 # Use HDFS
 
-MLR supports HDFS read and output. You need to build Bösen with `HAS_HDFS = -DHAS_HADOOP` in `bosen/defns.mk`. See the [[YARN/HDFS page|Running-on-YARN-HDFS]] for detailed instructions.
+MLR supports HDFS read and output. You need to build Bösen with `HAS_HDFS = -DHAS_HADOOP` in `bosen/defns.mk`. See the [YARN/HDFS page](yarn-hdfs.md) for detailed instructions.
 
 Rebuild the binary if you rebuilt the library with Hadoop enabled (under `bosen/app/mlr`):
 
