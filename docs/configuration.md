@@ -6,13 +6,13 @@ This is the most common issue people have when running Petuum. Please read!
 
 **You must be able to `ssh` into all machines without a password - even if you are only using your local machine.** The Petuum apps will fail in unexpected ways if password-less `ssh` is not working. When this happens, you will not see any error output stating that this is the problem!
 
-**Hence, you will save yourself a lot of trouble by taking the time to ensure password-less `ssh` actually works, before you attempt to run the Petuum apps.** For example, if you are going to run Petuum on your local machine, make sure that `ssh 127.0.0.1` logs you in without asking for a password. See [[Installing Petuum|Installation]] for instructions on how to do this.
+**Hence, you will save yourself a lot of trouble by taking the time to ensure password-less `ssh` actually works, before you attempt to run the Petuum apps.** For example, if you are going to run Petuum on your local machine, make sure that `ssh 127.0.0.1` logs you in without asking for a password. See [Installing Petuum](installation.md) for instructions on how to do this.
 
 ## Bösen and Strads
 
 Petuum includes two platforms for writing and running ML applications: Bösen for data-parallel execution, and Strads for model-parallel execution. Each Petuum ready-to-run application is either a Bösen application, or a Strads application. The two systems use different machine configuration files; please see the following guides.
 
-**Note: This page explains machine configuration for non-YARN, stand-alone operation. If you are looking to run Petuum on YARN, please see [[this page|https://github.com/petuum/bosen/wiki/Running-on-YARN-HDFS]].**
+**Note: This page explains machine configuration for non-YARN, stand-alone operation. If you are looking to run Petuum on YARN, please see [this page](https://github.com/petuum/bosen/wiki/Running-on-YARN-HDFS).**
 
 ## Bösen configuration files
 
