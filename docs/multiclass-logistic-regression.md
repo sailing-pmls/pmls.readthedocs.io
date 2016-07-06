@@ -2,10 +2,10 @@
 
 Multi-class logistic regression, or Multinomial Logistic Regression (MLR) generalizes binary logistic regression to handle settings with multiple classes. It can be applied directly to multiclass classification problem, or used within other models (e.g. the last layer of a deep neural network). Our MLR app is implemented on the Bösen system.
 
-### Performance
+## Performance
 Using 8 machines (16 cores each), the MLR application converges in approximately 20 iterations or 6 minutes, on the [MNIST dataset](http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/multiclass.html#mnist8m) (8M samples, 784 feature dimensions, taking 19GB of hard disk space as libsvm format).
 
-### Preliminaries
+## Preliminaries
 
 MLR uses the `ml` module in Bösen. If you followed the installation instructions, this should already be built, but if not, go to `bosen/` and run
 
@@ -13,7 +13,7 @@ MLR uses the `ml` module in Bösen. If you followed the installation instruction
 make ml_lib
 ```
 
-# Quick Start
+## Quick Start
 
 Petuum MLR can be found in `bosen/app/mlr`. From this point on, all instructions will assume you are in `bosen/app/mlr`.  After building the main Petuum libraries (as explained earlier in this manual), you can build the MLR app from `bosen/app/mlr` by running
 
@@ -51,7 +51,7 @@ I0701 00:35:00.553907  9031 mlr_main.cpp:150] MLR finished and shut down!
 
 The numbers will be slightly different as it's executed indeterministically with multi-threads. The evaluations are saved to `output/out.loss` and model weights saved to `output/out.weight`.
 
-# Use HDFS
+## Use HDFS
 
 MLR supports HDFS read and output. You need to build Bösen with `HAS_HDFS = -DHAS_HADOOP` in `bosen/defns.mk`. See the [YARN/HDFS page](yarn-hdfs.md) for detailed instructions.
 
@@ -95,7 +95,7 @@ Then launch it as before:
 hadoop fs -cat /path/to/mlr_data/out.loss
 ```
 
-# Use Yarn
+## Use Yarn
 
 We will launch job through Yarn and read/output to HDFS. Make sure you've built Yarn by running `gradle build` under `bosen/src/yarn` and have HDFS enabled in `bosen/defns.mk` like before.
 
@@ -128,7 +128,7 @@ yarn logs -applicationId application_1431548686685_0240
 
 There you should see similar output as before. As before, you can check the results by `hadoop fs -cat /path/to/mlr_data/out.loss`.
 
-# Data Format
+## Data Format
 
 MLR accepts both libsvm format (good for data with sparse features) and dense binary format (for dense features). Here we focus on libsvm. The covtype data set (`datasets/covtype.scale.train.small`) uses libsvm and looks like:
 
@@ -150,7 +150,7 @@ where the first column is the class label and the rest are `feature_id:feature_v
 
 Similarly for test set meta file `datasets/covtype.scale.test.small.meta`.
 
-# Synthetic Data
+## Synthetic Data
 
 While we are on the topic of data, let's look at the synthetic data generator which was built in previous `make`. An example script is provided for generating sparse synthetic data in `scripts/run_gen_data.py`. The parameters in the scripts are explained in the source code's flag definitions `bosen/app/mlr/src/tools/gen_data_sparse.cpp`. In particular, `num_train`, `feature_dim`, `nnz_per_col` will primarily determine the size of your data set. The generation mechanism is well documented in the header comment in the source code if you are interested in how multi-class sparse data is generated. The generator will automatically output both the data file and the associated meta data required by MLR to make it easy for MLR to consume.
 
@@ -162,7 +162,7 @@ python script/run_gen_data.py
 
 and find the data at `datasets/lr2_dim10_s100_nnz10.x1.libsvm.X.0`.
 
-# MLR Details
+## MLR Details
 
 With the data in place, let's look at the input parameters for MLR in `script/launch.py` (similar set of parameters are also in `script/run_local.py` which is for Yarn.):
 
@@ -193,7 +193,7 @@ With the data in place, let's look at the input parameters for MLR in `script/la
     * `staleness=0`: Staleness for the weight table (the main table).
     * `num_comm_channels_per_client=1`: The number of threads running server and back ground communication. Usually 1~2 is good enough.
 
-#### Terminating the MLR app
+## Terminating the MLR app
 
 The MLR app runs in the background, and outputs its progress to standard error. If you need to terminate the app before it finishes, just run
 
