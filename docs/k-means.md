@@ -22,7 +22,7 @@ The last command runs kmeans using the provided sample dataset `dataset/sample.t
 
 # Use HDFS
 
-Kmeans supports HDFS read and output. You need to build Bösen with `HAS_HDFS = -DHAS_HADOOP` in `bosen/defns.mk`. See the [[YARN/HDFS page|Running-on-YARN-HDFS]] for detailed instructions.
+Kmeans supports HDFS read and output. You need to build Bösen with `HAS_HDFS = -DHAS_HADOOP` in `bosen/defns.mk`. See the [YARN/HDFS page](yarn-hdfs.md) for detailed instructions.
 
 Rebuild the binary if you rebuilt the library with Hadoop enabled (under `bosen/app/kmeans`):
 
@@ -117,7 +117,7 @@ python data_generate.py 10 10 100 libsvm
 
 
 ## Setting up machines
-Put the desired machine IP addresses in the Parameter Server machine file. See this page for more information: [[Configuration-Files-for-Petuum-apps]].
+Put the desired machine IP addresses in the Parameter Server machine file. See this page for more information: [Configuration Files for Petuum apps](configuration.md).
 
 ## Common Parameters
 In `script/launch.py.template' and `script/run_local.py.template`:
