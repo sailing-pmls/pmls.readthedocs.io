@@ -1,14 +1,14 @@
-# What is MedLDA?
+# MedLDA
 
 Maximum entropy discrimination latent Dirichlet allocation (MedLDA, [JMLR'12 paper](http://bigml.cs.tsinghua.edu.cn/~jun/pub/MedLDA_jmlr.pdf)) is a supervised topic model that jointly learns classifier and latent topic representation from the text, by integrating max-margin principle to hierarchical Bayesian topic model. Here we provide multi-class MedLDA using Gibbs sampling algorithm described in the [KDD'13 paper](http://bigml.cs.tsinghua.edu.cn/~jun/large-scale-gibbs-medlda.pdf).
 
 MedLDA is built on top of the **Strads** scheduler system, but uses a data-parallel style. A similar (though more complicated) implementation can be found [here](http://bigml.cs.tsinghua.edu.cn/~jun/gibbs-medlda.shtml).
 
-### Performance
+## Performance
 
 Using 20 machines (12 cores each), the Strads MedLDA app can solve for 1.1 million documents, 20 labels, 1000 topics in 5000 seconds.
 
-# Installation
+## Installation
 The application can be found at `strads/apps/medlda_release/`. All subsequent operations are done under this directory:
 
     cd strads/apps/medlda_release/
@@ -19,7 +19,7 @@ Assuming you have completed the Strads installation instructions,
 
 will do the right job. The generated binary executable is located under `bin/`. 
 
-# Data Preparation
+## Data Preparation
 This application takes inputs in LIBSVM format:
 
     <label>...<word>:<count>...
@@ -51,8 +51,8 @@ If your cluster doesn't support Network File System (NFS), don't forget to `scp`
 
 If your cluster supports NFS or you only intend to do a single machine experiment, you're ready to go.
 
-# Running MedLDA
-## Quick example on a single machine
+## Running MedLDA
+### Quick example on a single machine
 We will train MedLDA on 20newsgroups dataset on a single machine. The dataset and machine configuration files are provided in the package. It will spawn 3 servers and 3 workers, each worker running 2 threads.
 You can then execute:
 
