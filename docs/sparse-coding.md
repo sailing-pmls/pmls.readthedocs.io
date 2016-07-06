@@ -6,11 +6,11 @@ If `X` is N-by-M, then `B` will be K-by-M and `S` will be N-by-K, where N is the
 
 Our Sparse Coding app uses the projected Stochastic Gradient Descent (SGD) algorithm to learn the dictionary `B` and the coefficients `S`.
 
-### Performance
+## Performance
 
 On a dataset with 1M data instances; 22K feature dimension; 22M parameters, the Bösen Sparse Coding implementation converges in approximately 12.5 hours, using 8 machines (16 cores each).
 
-# Quick Start
+## Quick Start
 
 The Sparse Coding app can be found in `bosen/app/sparsecoding/`. From this point on, all instructions will assume you are in `bosen/app/sparsecoding/`. After building Petuum (as explained earlier in this manual), you can build the Sparse Coding app from `bosen/app/sparsecoding` by running
 
@@ -76,7 +76,7 @@ The file `loss.txt` contains the statistics of loss function evaluated at iterat
 
 You won't see the exact same numeric values in different runs as there are multiple optimums of the optimization problem. All you need to confirm is that the optimized `S` shall be sparse and average objective function value of the final result shoud be lower than or close to 0.1.
 
-# Data format
+## Data format
 
 The Sparse Coding app takes a dense matrix `X` as input, where each row corresponds to a data sample and each column corresponds to a feature. The file containing `X` should be a binary or text file, and elements are sorted by rows then columns:
 
@@ -89,7 +89,7 @@ ele_n-1_0   ele_n-1_1   ... ele_n-1_n-1
 
 You must specify the format of file (binary or text) by using the parameter `file_format`, which will be explained in [Running the Sparse Coding application](#running-the-sparse-coding-application) section.
 
-# Creating synthetic data
+## Creating synthetic data
 
 We provide a synthetic data generator for testing the app (requires Python 2.7). To see detailed instructions, run
 
@@ -98,7 +98,7 @@ python script/make_synth_data.py
 ```
 
 
-# Running the Sparse Coding application
+## Running the Sparse Coding application
 
 There are many parameters involved for running Sparse Coding. We provide default values for all of them in `scripts/run_local.py`. Some important ones are:
 
@@ -148,7 +148,7 @@ There are many parameters involved for running Sparse Coding. We provide default
 
 After all parameters have been chosen appropriately, use the command `./script/run_local.py`, then Sparse Coding application will run in background. The results will be put as specified in `output_dirname`. Matrix `B` will be stored in `B.txt` in client 0 (whose ip appears in the first line in hostfile). Matrix `S` will be stored in a row-partitioned manner, i.e., client i will have a `S.txt.i` in `output_dirname`, and the whole matrix `S` can be obtained by putting all `S.txt.i` together, which will be explained in [Data partitioning](#data-partitioning).
 
-#### Terminating the Sparse Coding app
+### Terminating the Sparse Coding app
 
 The Sparse Coding app runs in the background, and outputs its progress to log files in user-specified directory. If you need to terminate the app before it finishes, just run
 
@@ -156,7 +156,7 @@ The Sparse Coding app runs in the background, and outputs its progress to log fi
 ./script/kill.py <petuum_ps_hostfile>
 ```
 
-#### Data partitioning
+### Data partitioning
 
 If there are multiple machines in host file, each machine will only take a part of input matrix. Concretely, if there are `num_client` clients, client i will read the j-th row of `X` if j mod `num_client`=i. For example, if the data matrix `X` is:
 
