@@ -9,14 +9,14 @@ Test the app (on your local machine) by running
 
 `python svm.py`
 
-This will perform SVM on [[rcv1.binary sample data|https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html#rcv1.binary]] in `./input`. The estimated model weights can be found in `./output`.
+This will perform SVM on [rcv1.binary sample data](https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html#rcv1.binary) in `./input`. The estimated model weights can be found in `./output`.
 
 ### Performance
 Coming soon 
 
 # Input data format
 
-The SVM use the [[LIBSVM format|https://www.csie.ntu.edu.tw/~cjlin/libsvm/]]:
+The SVM use the [LIBSVM format](https://www.csie.ntu.edu.tw/~cjlin/libsvm/):
 
 ```
 y col:value  col:value  col:value  col:value  col:value 
@@ -43,7 +43,7 @@ Each row with column id and value represents a non-zero model-parameter.
 # Machine configuration 
 See [Strads configuration files](https://github.com/petuum/bosen/wiki/Configuration-Files-for-Petuum-Apps#strads-configuration-files)
 
-#Program Options 
+# Program Options 
 The SVM is launched using a python script, e.g. svm.py.
 
 ```
