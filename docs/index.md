@@ -9,6 +9,20 @@
    configuration
    yarn-hdfs
    faq
+   latent-dirichlet-allocation
+   med-lda
+   dnn-general
+   dnn-speech
+   matrix-fact
+   nonneg-matrix-fact
+   sparse-coding
+   lasso-and-lr
+   distance-metric-learning
+   k-means
+   random-forest
+   lasso-and-lr
+   support-vector-machine
+   multiclass-logistic-regression
 ```
 
 # Overview
