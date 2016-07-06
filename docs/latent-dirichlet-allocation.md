@@ -8,11 +8,11 @@ Topic modeling, a.k.a Latent Dirichlet Allocation (LDA), is an algorithm that di
 
 Petuum's Strads LDA app uses a new model-parallel Gibbs sampling scheme described in this 2014 [NIPS paper](http://www.cs.cmu.edu/~epxing/papers/2014/STRADS_NIPS14.pdf), and implemented on top of the Strads scheduler. The documents are partitioned onto different machines, which take turns to sample disjoint subsets of words. By keeping the word subsets disjoint, our model-parallel implementation exhibits improved convergence times and memory utilization over data-parallel strategies. We use the sparse Gibbs sampling procedure in Yao et al (2009).
 
-### Performance 
+## Performance 
 
 The Strads LDA app can train an LDA model with 1K topics, from a corpus with 8M documents and vocabulary size 140K, in 1000 seconds (17 minutes) using 25 machines (16 cores each).
 
-# Quick start
+## Quick start
 
 Petuum LDA uses the **Strads** scheduler, and can be found in `strads/apps/lda_release/`. **From this point on, all instructions will assume you are in `strads/apps/lda_release/`.** After building Strads (as explained under Installation), you may build the LDA app from `strads/apps/lda_release/` by running
 
@@ -28,7 +28,7 @@ Test the app (on your local machine) by running
 
 This will learn 1000 topics from a small subset of the NYtimes dataset, and output the word-topic and doc-topic tables to `tmplog/wt-mach-*` and `tmplog/dt-mach-*` respectively.
 
-# Input data format
+## Input data format
 
 The LDA app takes a single file as input, with the following format:
 
@@ -43,7 +43,7 @@ The LDA app takes a single file as input, with the following format:
 
 Each line represents a single document: the first item is the document ID (0-indexed), followed by any character string (represented by `dummyword`), and finally a list of tokens in the document, each represented by its word ID.
 
-# Output format
+## Output format
 
 The LDA app outputs two types of files: word-topic tables `tmplog/wt-mach-*` and doc-topic tables `tmplog/dt-mach-*`. The word-topic tables use this format:
 
@@ -65,7 +65,7 @@ doc-id, topic-id count, topic-id count, topic-id count ...
 
 The number of files `wt-mach-*` and `dt-mach-*` depends on the number of worker processes used --- see the next section for more information.
 
-# Program options
+## Program options
 
 The LDA app is launched using a python script, e.g. `run.py` used earlier:
 
