@@ -2,7 +2,7 @@
 
 ## Foreword and Supported Operating Systems
 
-Petuum Bösen is a communication-efficient distributed key-value store (parameter server) for data-parallel Machine Learning, and Petuum Strads is a dynamic scheduler for model-parallel Machine Learning. Both Bösen and Strads have been officially tested on **64-bit Ubuntu Desktop 14.04** (available at: http://www.ubuntu.com/download/desktop). The instructions in this tutorial are meant for Ubuntu 14.04.
+Petuum Bösen is a communication-efficient distributed key-value store (parameter server) for data-parallel Machine Learning, and Petuum Strads is a dynamic scheduler for model-parallel Machine Learning. Both Bösen and Strads have been officially tested on **64-bit Ubuntu Desktop 14.04** (available at: [http://www.ubuntu.com/download/desktop](http://www.ubuntu.com/download/desktop)). The instructions in this tutorial are meant for Ubuntu 14.04.
 
 We have also successfully tested Petuum on some versions of RedHat and CentOS. However, the commands for installing dependencies in this manual are specific to 64-bit Ubuntu Desktop 14.04. They do not apply to RedHat/CentOS; you will need to know the corresponding packages in `yum`.
 
@@ -94,12 +94,12 @@ If you have a firewall, you must open these ports on all machines:
 * Strads apps: port ranges 47000-47999 and 38000-38999
 
 ## Cloud compute support
-Petuum can run in any Linux-based cloud environment that supports SSH; we recommend using 64-bit Ubuntu 14.04. If you wish to run Petuum on Amazon EC2, we recommend using the official 64-bit Ubuntu 14.04 Amazon Machine Images provided by Canonical: http://cloud-images.ubuntu.com/releases/14.04/release/.
+Petuum can run in any Linux-based cloud environment that supports SSH; we recommend using 64-bit Ubuntu 14.04. If you wish to run Petuum on Amazon EC2, we recommend using the official 64-bit Ubuntu 14.04 Amazon Machine Images provided by Canonical: [http://cloud-images.ubuntu.com/releases/14.04/release/](http://cloud-images.ubuntu.com/releases/14.04/release/).
 
 If you're using Red Hat Enterprise Linux or CentOS on Google Compute Engine, you need to turn off the `iptables` firewall (which is on by default), or configure it to allow traffic through ports 9999-10998 (or whatever ports you intend to use). See https://developers.google.com/compute/docs/troubleshooting#knownissues for more info.
 
 ## Getting started with applications
 
 Now that you have successfully set up Petuum on one or more machines, you can try out some applications. We recommend getting started with:
-* [[Bösen: Non-negative Matrix Factorization|Non-negative-Matrix-Factorization-(NMF)]]
-* [[Strads: Latent Dirichlet Allocation|Latent-Dirichlet-Allocation]]
+* [Bösen: Non-negative Matrix Factorization](nonneg-matrix-fact.md]]
+* [Strads: Latent Dirichlet Allocation](latent-dirichlet-allocation.md)
