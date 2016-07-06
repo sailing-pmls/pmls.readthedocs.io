@@ -101,4 +101,4 @@ Strads requires a machine file - `singlemach.vm` in the above example. Strads ma
 127.0.0.1
 ```
 
-To prepare a multi-machine file, please refer to the Strads section under [[Configuration Files for Petuum Apps|Configuration-files-for-Petuum-apps]].
+To prepare a multi-machine file, please refer to the Strads section under [Configuration Files for Petuum Apps](configuration.md).
