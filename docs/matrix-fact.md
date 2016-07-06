@@ -6,7 +6,7 @@ MF is commonly used to perform Collaborative Filtering, where `A` represents the
 
 `A(i,j) = W(i,1)*H(1,i) + W(i,2)*H(2,i) + ... + W(i,K)*H(K,i)`
 
-The Petuum MF app uses a model-parallel coordinate descent scheme, implemented on the Strads scheduler. If you would like to use the older Bösen-based Petuum MF app, you may obtain it from the [[Petuum v0.93 release|https://github.com/petuum/public/tree/release_0.93]].
+The Petuum MF app uses a model-parallel coordinate descent scheme, implemented on the Strads scheduler. If you would like to use the older Bösen-based Petuum MF app, you may obtain it from the [Petuum v0.93 release](https://github.com/petuum/bosen/tree/v0.9.3).
 
 ### Performance 
 
@@ -30,7 +30,7 @@ This will perform a rank K=40 decomposition on a synthetic 10k-by-10k matrix, an
 
 # Input data format
 
-The MF app uses the [[MatrixMarket format|http://math.nist.gov/MatrixMarket/formats.html]]:
+The MF app uses the [MatrixMarket format](http://math.nist.gov/MatrixMarket/formats.html):
 
 ```
 %%MatrixMarket matrix coordinate real general
@@ -102,4 +102,4 @@ Strads requires a machine file - `singlemach.vm` in the above example. Strads ma
 127.0.0.1
 ```
 
-To prepare a multi-machine file, please refer to the Strads section under [[Configuration Files for Petuum Apps|Configuration-files-for-Petuum-apps]].
+To prepare a multi-machine file, please refer to the Strads section under [Configuration Files for Petuum Apps](configuration.md).
