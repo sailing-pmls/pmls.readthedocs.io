@@ -5,7 +5,7 @@ This app implements a fully-connected Deep Neural Network (DNN) for multi-class 
 
 On a dataset with 1M data instances; 360 feature dimension; 24M parameters, the Bösen DNN implementation converges in approximately 45 minutes, using 6 machines (16 cores each).
 
-[[ http://www.cs.cmu.edu/~pengtaox/petuum_results/dnn_cvg.png | height = 200px ]]
+![http://www.cs.cmu.edu/~pengtaox/petuum_results/dnn_cvg.png](http://www.cs.cmu.edu/~pengtaox/petuum_results/dnn_cvg.png)
 
 Going from 1 to 6 machines results in a speedup of roughly 4.1x.
 
