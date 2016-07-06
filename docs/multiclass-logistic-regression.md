@@ -1,4 +1,4 @@
-# Multi-class Logistic Regression (Bösen)
+# Multi-class Logistic Regression
 
 Multi-class logistic regression, or Multinomial Logistic Regression (MLR) generalizes binary logistic regression to handle settings with multiple classes. It can be applied directly to multiclass classification problem, or used within other models (e.g. the last layer of a deep neural network). Our MLR app is implemented on the Bösen system.
 
