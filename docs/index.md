@@ -23,6 +23,41 @@ The Petuum project is organized into 4 open-source (BSD 3-clause license) Github
 
 To install Bösen and Strads, please continue reading this manual. If you have a Java environment and want to use JBösen, please start [here](https://github.com/petuum/jbosen/wiki). If you wish to use Poseidon for Deep Learning, please go [here](https://github.com/petuum/poseidon/wiki).
 
+## Petuum Bösen/Strads v1.1 manual
+
+1. [[Quickstart|Quickstart]]
+  1. [[Detailed Installation Instructions|Installation]]
+  1. [[Configuration and Machine Files for Petuum Apps|Configuration-Files-for-Petuum-Apps]]
+  1. [[Running on Hadoop clusters with YARN/HDFS|Running-on-YARN-HDFS]]
+  1. [[Frequently Asked Questions|FAQ]]
+1. ML Applications
+  1. Topic Models
+    1. [[Latent Dirichlet Allocation (topic modeling)|Latent-Dirichlet-Allocation]]
+    1. [[MedLDA (supervised topic modeling)|MedLDA]]
+  1. Deep Learning
+    1. [[Poseidon: Distributed Deep Learning Framework on Petuum|https://github.com/petuum/poseidon/wiki]]
+    1. [[General-purpose Deep Neural Network (DNN)|General-purpose-Deep-Neural-Network-(DNN)]]
+      1. [[DNN for Speech Recognition|DNN-for-Speech-Recognition]]
+  1. Matrix Factorization and Sparse Coding
+    1. [[Matrix Factorization (collaborative filtering)|Matrix-Factorization]]
+    1. [[Non-negative Matrix Factorization (NMF)|Non-negative-Matrix-Factorization-(NMF)]]
+    1. [[Sparse Coding|Sparse-Coding]]
+  1. Regression
+    1. [[Lasso Regression|Logistic-regression,-Lasso]]
+  1. Metric Learning
+    1. [[Distance Metric Learning|Distance-Metric-Learning]]
+  1. Clustering
+    1. [[K-means Clustering|Kmeans-Clustering]]
+  1. Classification
+    1. [[Random Forest|Random-Forest]]
+    1. [[Logistic Regression|Logistic-regression,-Lasso]]
+    1. [[SVM|Support-Vector-Machine]] (Newly added in v1.1)
+    1. [[Multi-class Logistic Regression|Multi-class-Logistic-Regression]]
+    
+1. Programming API
+  1. [[Bösen Bounded-Async Key-Value Store|Bosen-Bounded-Async-Key-Value-Store]]
+  1. [[Strads Model-Parallel Scheduler|STRADS-Model-Parallel-Scheduler]] (Coming soon)
+
 ## Introduction to Petuum
 
 Petuum is a distributed machine learning framework. It takes care of the difficult system "plumbing work", allowing you to focus on the ML. Petuum runs efficiently at scale on research clusters and cloud compute like Amazon EC2 and Google GCE.
