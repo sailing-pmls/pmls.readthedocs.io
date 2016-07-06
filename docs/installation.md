@@ -96,7 +96,7 @@ If you have a firewall, you must open these ports on all machines:
 ## Cloud compute support
 Petuum can run in any Linux-based cloud environment that supports SSH; we recommend using 64-bit Ubuntu 14.04. If you wish to run Petuum on Amazon EC2, we recommend using the official 64-bit Ubuntu 14.04 Amazon Machine Images provided by Canonical: [http://cloud-images.ubuntu.com/releases/14.04/release/](http://cloud-images.ubuntu.com/releases/14.04/release/).
 
-If you're using Red Hat Enterprise Linux or CentOS on Google Compute Engine, you need to turn off the `iptables` firewall (which is on by default), or configure it to allow traffic through ports 9999-10998 (or whatever ports you intend to use). See https://developers.google.com/compute/docs/troubleshooting#knownissues for more info.
+If you're using Red Hat Enterprise Linux or CentOS on Google Compute Engine, you need to turn off the `iptables` firewall (which is on by default), or configure it to allow traffic through ports 9999-10998 (or whatever ports you intend to use). See [https://developers.google.com/compute/docs/troubleshooting#knownissues](https://developers.google.com/compute/docs/troubleshooting#knownissues) for more info.
 
 ## Getting started with applications
 
