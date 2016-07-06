@@ -8,9 +8,9 @@ As of version 1.1, Petuum includes support for running apps on YARN and HDFS (Ha
 * **`hadoop` command is working on every machine.**
 * **Java 7 or higher is installed.**
 
-First, install Petuum on every machine in the YARN cluster, as described in [[Installation|Installation]]. You may install Petuum to the local filesystem; NFS is not required for YARN operation.
+First, install Petuum on every machine in the YARN cluster, as described in [Installation](installation.md). You may install Petuum to the local filesystem; NFS is not required for YARN operation.
 
-Second, you will need to install Gradle to build the Petuum Java components required for YARN. Follow the instructions on the [[Gradle webpage|http://gradle.org]] to install Gradle, and ensure that the command `gradle` (from the `bin` subdirectory) is in your PATH.
+Second, you will need to install Gradle to build the Petuum Java components required for YARN. Follow the instructions on the [Gradle webpage](http://gradle.org) to install Gradle, and ensure that the command `gradle` (from the `bin` subdirectory) is in your PATH.
 
 **We do not recommend installing Gradle via `apt-get` on Ubuntu 14.04, as the repository version may be out of date.**
 
@@ -62,13 +62,13 @@ The list of supported apps, as well as instructions on how to run them, can be f
 
 The following Bösen apps have YARN+HDFS support:
 
-  * [[General-purpose Deep Neural Network (DNN)|General-purpose-Deep-Neural-Network-(DNN)]]
-  * [[Non-negative Matrix Factorization (NMF)|Non-negative-Matrix-Factorization-(NMF)]]
-  * [[Sparse Coding|Sparse-Coding]]
-  * [[Distance Metric Learning|Distance-Metric-Learning]]
-  * [[K-means Clustering|Kmeans-Clustering]]
-  * [[Random Forest|Random-Forest]]
-  * [[Multi-class Logistic Regression|Multi-class-Logistic-Regression]]
+  * [General-purpose Deep Neural Network (DNN)](dnn-general.md)
+  * [Non-negative Matrix Factorization (NMF)](nonneg-matrix-fact.md)
+  * [Sparse Coding](sparse-coding.md)
+  * [Distance Metric Learning](distance-metric-learning.md)
+  * [K-means Clustering](k-means.md)
+  * [Random Forest](random-forest.md)
+  * [Multi-class Logistic Regression](multiclass-logistic-regression.md)
 
 Please refer to the respective wiki pages for running instructions. **Note that the YARN launch scripts are different from the regular SSH launch scripts.**
 
