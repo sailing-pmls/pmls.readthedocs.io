@@ -20,7 +20,6 @@
    distance-metric-learning
    k-means
    random-forest
-   lasso-and-lr
    support-vector-machine
    multiclass-logistic-regression
 ```
