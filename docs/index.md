@@ -26,11 +26,14 @@ To install Bösen and Strads, please continue reading this manual. If you have a
 ## Petuum Bösen/Strads v1.1 manual
 
 1. [Quickstart](quickstart.md)
+
   1. [Detailed Installation Instructions](installation.md)
   1. [Configuration and Machine Files for Petuum Apps](configuration.md)
   1. [Running on Hadoop clusters with YARN/HDFS](yarn-hdfs.md)
   1. [Frequently Asked Questions](faq.md)
+
 1. ML Applications
+
   1. Topic Models
     1. [Latent Dirichlet Allocation (topic modeling)](latent-dirichlet-allocation.md)
     1. [MedLDA (supervised topic modeling)](med-lda.md)
