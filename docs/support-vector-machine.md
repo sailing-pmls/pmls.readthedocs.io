@@ -1,4 +1,4 @@
-# Quick start for Support Vector Machine
+# Support Vector Machine
 Petuum provides a SVM solver on distributed system. SVM application can be found in `strads/apps/svm_release/`. From this point on, all instructions will assume you are in `strads/apps/svm_release/`.
 
 After building the Strads system (as explained in the installation page), you may build the the SVM solver from `strads/apps/svm_release/` by running 
