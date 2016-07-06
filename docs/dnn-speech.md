@@ -4,8 +4,8 @@ This tutorial shows how the Deep Neural Network (DNN) application (implemented o
 
 Our DNN consists of an input layer, arbitrary number of hidden layers and an output layer. Each layer contains a certain amount of neuron units. Each unit in the input layer corresponds to an element in the feature vector. We represent the class label using 1-of-K coding and each unit in the output layer corresponds to a class label. The number of hidden layers and the number of units in each hidden layer are configured by the users. Units between adjacent layers are fully connected. In terms of DNN learning, we use the cross entropy loss and stochastic gradient descent where the gradient is computed using backpropagation method. 
 
-# Installation
-#### Petuum Deep Neural Network Application
+## Installation
+### Petuum Deep Neural Network Application
 The DNN for Speech Recognition app can be found in `bosen/app/dnn_speech/`. From this point on, all instructions will assume you are in `bosen/app/dnn_speech/`. After building Petuum (as explained earlier in this manual), you can build the DNN from `bosen/app/dnn_speech/` by running
 
 ```
@@ -14,7 +14,7 @@ make
 
 This will put the DNN binary in the subdirectory `bin/`.
 
-#### Kaldi
+### Kaldi
 
 From `bosen/app/dnn_speech/`, extract Kaldi by running:
 ```
@@ -39,11 +39,11 @@ make
 ```
 The first `make` may produce some "Error 1 (ignored)" messages, this is normal and can be ignored. The `./configure` may produce a warning about GCC 4.8.2, which can also be ignored for our purposes. Be advised that these steps will take a while (up to 1-2 hours).
 
-# The Whole Pipeline
+## The Whole Pipeline
 
 Currently, we only support TIMIT dataset (<https://catalog.ldc.upenn.edu/LDC93S1>), a well-known benchmark dataset for speech recognition. You can process this dataset through following steps.
 
-#### 1. Feature extraction
+### 1. Feature extraction
 
 **WARNING: this stage will take several hours, and requires at least 16GB free RAM.**
 
@@ -60,7 +60,7 @@ where `<TIMIT_path>` is the **absolute** path to the TIMIT directory. This will 
 - `tail.txt` contains the empirical distribution of the classes of labels, saved in the format of Dan's setup in Kaldi.
 - `kaldi-trunk/egs/timit/s5/exp/petuum_dnn` contains all the log file and intermediate results.
 
-#### 2. DNN Training
+### 2. DNN Training
 According to the information in `Train.para`, you can set the configuration file for DNN (more details can be found in `Input data format` and `Format of DNN Configuration file` section). For example, if `Train.para` is
 ```
 360 2001 1031950
@@ -90,14 +90,14 @@ DNN_para.txt
 ```
 which stores weight matrices and bias vectors as Dan's setup in Kaldi. More details can be found in next section.
 
-#### 3. Decoding
+### 3. Decoding
 Run
 ```
 scripts/NetworkDecode.sh DNN_para.txt datasets/para_imnet.txt
 ```
 Wait for several minutes and you will see the decode result over the core test dataset of TIMIT. 
 
-# Running the Deep Neural Network application
+## Running the Deep Neural Network application
 
 Notice that the interface of DNN for speech recognition is slightly different from the general purpose DNN in `app/dnn`. To see the instructions for the DNN for speech app, run
 ```
@@ -127,7 +127,7 @@ For example, to run the DNN app on local machine (one client) where the number o
 scripts/run_dnn.sh 4 5 machinefiles/localserver datasets/para_imnet.txt datasets/data_partition.txt DNN_para.txt
 ```
 
-# Input data format
+## Input data format
 We assume users have partitioned the data into M pieces, where M is the total number of clients (machines). Each client will be in charge of one piece. User needs to provide a file recording the data partition information. In this file, each line corresponds to one data partition. The format of each line is
 ```
 <data_file> \t <num_data_in_partition>
@@ -160,7 +160,7 @@ The format of `<data_file>.label` is
 Note that class label starts from 0. If there are K classes, the range of class labels are [0,1,...,K-1].
 
 
-# Format of DNN Configuration File
+## Format of DNN Configuration File
 
 The DNN configurations are stored in `<parameter_file>`. Each line corresponds to a parameter and its format is
 ```
@@ -190,7 +190,7 @@ num_smp_evaluate: 2000
 num_iters_evaluate: 100
 ```
 
-# Output format
+## Output format
 The DNN app outputs just one file:
 
 ```
@@ -199,7 +199,7 @@ The DNN app outputs just one file:
 
 `<model_para_file>` saves the weight matrices and bias vectors. The order is: weight matrix between layer 1 (input layer) and layer 2 (the first hidden layer), bias vector for layer 2, weight matrix between layer 2 and layer 3, bias vector for layer 3, etc. All matrices are saved in row major order and each line corresponds to a row. Elements in each row are separated with blank.
 
-# Terminating the DNN app
+## Terminating the DNN app
 The DNN app runs in the background, and outputs its progress to stdout. If you need to terminate the app before it finishes, for distributed version, run
 
 ```
