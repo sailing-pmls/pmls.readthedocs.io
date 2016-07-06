@@ -25,9 +25,9 @@ To install Bösen and Strads, please continue reading this manual. If you have a
 
 ## Petuum Bösen/Strads v1.1 manual
 
-1. [[Quickstart|Quickstart]]
-  1. [[Detailed Installation Instructions|Installation]]
-  1. [[Configuration and Machine Files for Petuum Apps|Configuration-Files-for-Petuum-Apps]]
+1. [Quickstart](quickstart.md)
+  1. [Detailed Installation Instructions](installation.md)
+  1. [Configuration and Machine Files for Petuum Apps](configuration.md)
   1. [[Running on Hadoop clusters with YARN/HDFS|Running-on-YARN-HDFS]]
   1. [[Frequently Asked Questions|FAQ]]
 1. ML Applications
