@@ -69,5 +69,5 @@ Use the following command to display top 10 words in each of the topics that's j
 python petuum.py display_topics
 ```
 
-If you seek further deployment or prefer a more detailed hands-on experience, please refer to the [[full installation guide|Installation]] or the [[manual|Home]].
+If you seek further deployment or prefer a more detailed hands-on experience, please refer to the [full installation guide](installation.md) or the [manual](index.md).
 Also check out [Poseiden](https://github.com/petuum/poseidon/wiki#quick-start), the multi-GPU distributed deep learning framework of Petuum.
