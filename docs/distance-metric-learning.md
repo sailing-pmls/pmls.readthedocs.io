@@ -8,7 +8,7 @@ This app implements Distance Metric Learning (DML) as proposed in [1], on **Bös
 
 On a dataset with 1M data instances; 22K feature dimension; 22M parameters, the Bösen DML implementation converges in approximately 15 minutes, using 4 machines (64 cores each).
 
-[[ http://www.cs.cmu.edu/~pengtaox/petuum_results/dml_cvg.png | height = 200px ]]
+[http://www.cs.cmu.edu/~pengtaox/petuum_results/dml_cvg.png](http://www.cs.cmu.edu/~pengtaox/petuum_results/dml_cvg.png)
 
 Going from 1 to 4 machines results in a speedup of roughly 3.75x.
 
