@@ -101,5 +101,5 @@ If you're using Red Hat Enterprise Linux or CentOS on Google Compute Engine, you
 ## Getting started with applications
 
 Now that you have successfully set up Petuum on one or more machines, you can try out some applications. We recommend getting started with:
-* [Bösen: Non-negative Matrix Factorization](nonneg-matrix-fact.md]]
+* [Bösen: Non-negative Matrix Factorization](nonneg-matrix-fact.md)
 * [Strads: Latent Dirichlet Allocation](latent-dirichlet-allocation.md)
