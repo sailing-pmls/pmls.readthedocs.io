@@ -50,7 +50,7 @@ To install Bösen and Strads, please continue reading this manual. If you have a
         1. [K-means Clustering](k-means.md)
     1. Classification
         1. [Random Forest](random-forest.md)
-        1. [Logistic Regression](lasso-lr.md)
+        1. [Logistic Regression](lasso-and-lr.md)
         1. [SVM](support-vector-machine.md) (Newly added in v1.1)
         1. [Multi-class Logistic Regression](multiclass-logistic-regression.md)
 1. Programming API
