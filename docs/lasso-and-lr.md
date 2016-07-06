@@ -1,4 +1,4 @@
-# Quick start for Lasso/Logistic Regression
+# Lasso and Logistic Regression
 Petuum provides a linear solver for Lasso and Logistic Regression, using the **Strads** scheduler system. These apps can be found in `strads/apps/linear-solver_release/`. From this point on, all instructions will assume you are in `strads/apps/linear-solver_release/`.
 
 After building the Strads system (as explained in the installation page), you may build the the linear solver from `strads/apps/linear-solver_release/` by running 
@@ -19,11 +19,11 @@ This will perform Lasso/LR on two separate synthetic data sets in `./input`. The
 ```
 **If you see this line, the Lasso/LR program has finished successfully.**
 
-### Performance
+## Performance
 
 The logistic regression app on Strads can solve a 10M-dimensional sparse problem (30GB) in 20 minutes, using 8 machines (16 cores each). The Lasso app can solve a 100M-dimensional sparse problem (60GB) in 30 minutes, using 8 machines (16 cores each).
 
-# Input data format
+## Input data format
 
 The Lasso/LR apps use the [MatrixMarket format](http://math.nist.gov/MatrixMarket/formats.html):
 
@@ -37,7 +37,7 @@ row col value
 
 The first line is the MatrixMarket header, and should be copied as-is. The second line gives the number of rows N, columns M, and non-zero entries in the matrix. This is followed by `num_nonzeros` lines, each representing a single matrix entry `A(row,col) = value` (where `row` and `col` are 1-indexed as like Matlab).
 
-# Output format
+## Output format
 
 The output file of Lasso/LR also follows the MatrixMarket format, and looks something like this:
 
@@ -53,10 +53,10 @@ The output file of Lasso/LR also follows the MatrixMarket format, and looks some
 
 This represents the model weights as a single row vector.
 
-# Machine configuration 
+## Machine configuration 
 See [Strads configuration files](https://github.com/petuum/bosen/wiki/Configuration-Files-for-Petuum-Apps#strads-configuration-files)
 
-#Program Options 
+## Program Options 
 The Lasso/LR is launched using a python script, e.g. lasso.py/logistic.py.
 
 ```
