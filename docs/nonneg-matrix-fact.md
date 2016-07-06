@@ -10,7 +10,7 @@ If `X` is N-by-M, then `L` will be N-by-K and `R` will be K-by-M where N is the 
 
 Our NMF app uses the projected Stochastic Gradient Descent (SGD) algorithm to learn the two matrices `L` and `R`.
 
-# Quick Start
+## Quick Start
 
 The NMF app can be found in `bosen/app/NMF/`. From this point on, all instructions will assume you are in `bosen/app/NMF/`. After building Petuum (as explained earlier in this manual), you can build the NMF app from `bosen/app/NMF` by running
 
@@ -72,7 +72,7 @@ The file `loss.txt` contains the statistics of loss function evaluated at iterat
 
 You won't see the exact same numeric values in different runs as there are multiple optimums of the optimization problem. All you need to confirm is that in optimized `L`, lines 1-3, lines 4-6 and line 7-9 shall be similar. Similarly, in optimized `R`, columns 1-3, 4-6, 7-9 shall be similar. 
 
-# Data format
+## Data format
 
 The NMF app takes a dense matrix `X` as input, where each row corresponds to a data sample and each column corresponds to a feature. The file containing `X` should be a binary or text file, and elements are sorted by rows then columns:
 
@@ -85,7 +85,7 @@ ele_n-1_0   ele_n-1_1   ... ele_n-1_n-1
 
 You must specify the format of file (binary or text) by using the parameter `file_format`, which will be explained in [Running the NMF application](#running-the-nmf-application) section.
 
-# Creating synthetic data
+## Creating synthetic data
 
 We provide a synthetic data generator for testing purposes (we have tested it on python 2.7). To see detailed instructions, run
 
@@ -94,7 +94,7 @@ python script/make_synth_data.py
 ```
 
 
-# Running the NMF application
+## Running the NMF application
 
 There are many parameters involved for running NMF. We provide default values for all of them in `script/run_local.py`. Some important ones are:
 
@@ -142,7 +142,7 @@ There are many parameters involved for running NMF. We provide default values fo
 
 After all parameters have been chosen appropriately, use the command `./script/run_local.py`, then NMF application will run in background. The results will be put as specified in `output_dirname`. Matrix `R` will be stored in `B.txt` in client 0 (whose ip appears in the first line in hostfile). Matrix `L` will be stored in a row-partitioned manner, i.e., client i will have a `L.txt.i` in `output_dirname`, and the whole matrix `L` can be obtained by putting all `L.txt.i` together, which will be explained in [Data partitioning](#data-partitioning).
 
-#### Terminating the NMF app
+## Terminating the NMF app
 
 The NMF app runs in the background, and outputs its progress to log files in user-specified directory. If you need to terminate the app before it finishes, just run
 
@@ -150,7 +150,7 @@ The NMF app runs in the background, and outputs its progress to log files in use
 ./script/kill.py <petuum_ps_hostfile>
 ```
 
-#### Data partitioning
+## Data partitioning
 
 If there are multiple machines in host file, each machine will only take a part of input matrix. Concretely, if there are `num_client` clients, client i will read the j-th row of `X` if j mod `num_client`=i. For example, if the data matrix `X` is:
 
