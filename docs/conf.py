@@ -1,16 +1,3 @@
-import recommonmark
-from recommonmark.parser import CommonMarkParser
-from recommonmark.transform import AutoStructify
-
-docs_petuum_root = 'http://docs.petuum.com/en/latest/'
-def setup(app):
-  app.add_config_value('recommonmark_config', {
-    'url_resolver': lambda url: docs_petuum_root + url,
-    'enable_auto_toc_tree': False,
-#    'auto_toc_tree_section': 'Contents',
-  }, True)
-  app.add_transform(AutoStructify)
-
 # -*- coding: utf-8 -*-
 #
 # Petuum documentation build configuration file, created by
@@ -33,7 +20,16 @@ def setup(app):
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+import recommonmark
+
+from recommonmark.parser import CommonMarkParser
+from recommonmark.transform import AutoStructify
+
 # -- General configuration ------------------------------------------------
+
+source_parsers = {
+  '.md': CommonMarkParser,
+}
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
@@ -49,10 +45,7 @@ templates_path = ['templates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
-#
-source_parsers = {'.md': CommonMarkParser}
 source_suffix = ['.rst', '.md']
-# source_suffix = '.rst'
 
 # The encoding of source files.
 #
@@ -344,3 +337,13 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #
 # texinfo_no_detailmenu = False
+
+# Set up recommonmark
+docs_root = 'http://docs.petuum.com/en/latest/'
+def setup(app):
+  app.add_config_value('recommonmark_config', {
+    'url_resolver': lambda url: docs_root + url,
+    'enable_auto_toc_tree': False,
+#    'auto_toc_tree_section': 'Contents',
+  }, True)
+  app.add_transform(AutoStructify)
