@@ -67,8 +67,8 @@ To install Bösen and Strads, please continue reading this manual. If you have a
         1. [SVM](support-vector-machine.md) (Newly added in v1.1)
         1. [Multi-class Logistic Regression](multiclass-logistic-regression.md)
 1. Programming API
-    1. [Bösen Bounded-Async Key-Value Store](Bosen-Bounded-Async-Key-Value-Store)
-    1. [Strads Model-Parallel Scheduler](STRADS-Model-Parallel-Scheduler) (Coming soon)
+    1. [Bösen Bounded-Async Key-Value Store](bosen-api.md)
+    1. [Strads Model-Parallel Scheduler](strads-api.md) (Coming soon)
 
 ## Introduction to Petuum
 
