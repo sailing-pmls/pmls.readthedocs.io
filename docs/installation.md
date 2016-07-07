@@ -55,6 +55,30 @@ If you are installing Petuum to a shared filesystem, **the above steps only need
 
 The first make builds Strads, and the second and third makes build Bösen and its dependencies. All commands will take between 5-30 minutes each, depending on your machine. We’ll explain how to compile and run Petuum’s built-in apps later in this manual.
 
+## Compiling Petuum Bösen with cmake
+
+Run the following commands to download Petuum Bösen.
+```
+git clone https://github.com/petuum/bosen.git
+```
+
+**For each machine that Petuum will be running on**, execute the following commands to install dependencies and libraries.
+```
+sudo apt-get -y install libgoogle-glog-dev libzmq3-dev libyaml-cpp-dev \
+  libgoogle-perftools-dev libsnappy-dev libsparsehash-dev libgflags-dev \
+  libboost-thread1.55-dev libboost-system1.55-dev libleveldb-dev \
+  libconfig++-dev libeigen3-dev libevent-pthreads-2.0-5
+```
+You’re now ready to compile Petuum. Run
+```
+cd bosen
+mkdir build
+cd build && cmake .. && make -j
+```
+If you are installing Petuum to a shared filesystem, **the above steps only need to be done from one machine**.
+The process takes about 5 minutes.
+
+
 ## Very important: Setting up password-less SSH authentication
 
 Petuum uses `ssh` (and `mpirun`, which invokes `ssh`) to coordinate tasks on different machines, **even if you are only using a single machine**. This requires password-less key-based authentication on all machines you are going to use (Petuum will fail if a password prompt appears).
