@@ -24,7 +24,7 @@ Change `app_dir` in `script/run_local.py`; see example below. You need to provid
 ```
 app_dir = "/home/user/bosen/app/dnn"
 ```
-then you can test that the app works on the local machine (with 4 worker threads). From the `bosen/app/dml` directory, run:
+then you can test that the app works on the local machine (with 4 worker threads). From the `bosen/app/dnn` directory, run:
 ```
 ./script/launch.py
 ```
