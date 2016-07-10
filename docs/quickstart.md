@@ -4,7 +4,7 @@ The fastest way to get started with Petuum is to use this [script](https://gist.
 After setting it up, you can run two demo applications to verify that they are working.
 To get the script:
 ```
-wget https://gist.githubusercontent.com/holyglenn/dc3a2b8a5d496735a0a297b0d5ec3479/raw/47442c52181545f40b4302c6ebdb19c25c75d433/petuum.py
+wget https://gist.githubusercontent.com/holyglenn/dc3a2b8a5d496735a0a297b0d5ec3479/raw/2b21c2cf23d0360d2b4760e92fdb308ab263dd49/petuum.py
 ```
 
 Before start, run the following command to prepare compilation environment.
