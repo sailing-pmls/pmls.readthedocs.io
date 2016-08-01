@@ -20,7 +20,7 @@ sudo apt-get -y install git
 Then, run the following commands to download Petuum Bösen and Strads:
 
 ```
-git clone https://github.com/petuum/bosen.git
+git clone -b stable https://github.com/petuum/bosen.git
 git clone https://github.com/petuum/strads.git
 cd bosen
 git clone https://github.com/petuum/third_party.git
