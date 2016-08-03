@@ -17,7 +17,7 @@ The Bosen App template file contains an abstract class ```PsApplication```, whic
 In this step, you need to implement 
 
 ```cpp
-void initialize(petuum::TableGroupConfig &table_group_config)
+void Initialize(petuum::TableGroupConfig &table_group_config)
 ```
 
 Initialization tasks such as data loading and table specification should be done here. After data are prepared, follow the steps below.
@@ -69,7 +69,7 @@ petuum::PSTableGroup::CreateTableDone();
 In this step, you need to implement
 
 ```cpp
-void runWorkerThread(int threadId)
+void RunWorkerThread(int threadId)
 ```
 
 This worker function will be executed on each thread when the Bosen is initialized.
@@ -126,14 +126,14 @@ And the rest will be taken care of by Bosen.
 
 ### Step 3. Instantiate and Run.
 
-Congratulations! You have now finished all the required steps towards an amazing Petuum Bosen application. To run the application, instantiate an app object and call its ```run(int32_t num_worker_threads)``` function in your main function, as in our [demo main function](https://github.com/petuum/bosen/blob/master/app/app_demo/src/lr_main.cpp):
+Congratulations! You have now finished all the required steps towards an amazing Petuum Bosen application. To run the application, instantiate an app object and call its ```Run(int32_t num_worker_threads)``` function in your main function, as in our [demo main function](https://github.com/petuum/bosen/blob/master/app/app_demo/src/lr_main.cpp):
 
 ```cpp
 #include "lr_app.hpp" 
 
 int main(int argc, char *argv[]) { 
   LRApp lrapp; 
-  lrapp.run(2); 
+  lrapp.Run(2); 
 
   return 0; 
 } 
