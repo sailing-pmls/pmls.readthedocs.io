@@ -149,11 +149,11 @@ To build the application with Make, you need to do the following:
 
 2. Include ```defns.mk``` in your makefile. We need defns.mk because it provides:
 
-  1) compile flags that are needed to compile the Bosen header files (PETUUM_CXXFLAGS);
+  a. compile flags that are needed to compile the Bosen header files (PETUUM_CXXFLAGS);
   
-  2) external libraries that the Bosen library depends on (PETUUM_LDFLAGS);
+  b. external libraries that the Bosen library depends on (PETUUM_LDFLAGS);
   
-  3) As well as paths to search for the external header files (PETUUM_INCFLAGS) and libraries (PETUUM_LDFLAGS). 
+  c. As well as paths to search for the external header files (PETUUM_INCFLAGS) and libraries (PETUUM_LDFLAGS). 
 
 3. With the above maros properly defined, you can write a Makefile of your own to compile this application.
 
