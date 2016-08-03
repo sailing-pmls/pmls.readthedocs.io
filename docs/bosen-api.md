@@ -1,7 +1,7 @@
 # Bosen API
 
 ## Write your first Petuum Bosen App
-After you have successfully completed the compilation process, you can follow this tutorial and start writing you first Bosen Application. The code fragments of this tutorial come from our [demo program][1]. You can read it when you finish this tutorial.
+After you have successfully completed the compilation process, you can follow this tutorial and start writing you first Bosen Application. The code fragments of this tutorial come from our [demo program](https://github.com/petuum/bosen/tree/master/app/app_demo). You can read it when you finish this tutorial.
 
 ### Step 0. Include the Bosen header file and the Bosen App template file.
 
@@ -34,7 +34,7 @@ Then you can refer to the type of a non-sparse row of floating-point numbers as 
 
 ### Step 1.1. Initialize Table Group.
 
-Here you need to set the configurations for the Table Group (i.e. the Parameter Server). Only one table is needed in our example. Refer to [configs.hpp][2] for the meanings of all table group parameters.
+Here you need to set the configurations for the Table Group (i.e. the Parameter Server). Only one table is needed in our example. Refer to [configs.hpp](https://github.com/petuum/bosen/blob/master/src/petuum_ps_common/include/configs.hpp#L57) for the meanings of all table group parameters.
 
 ```cpp
 table_group_config.num_tables = 1;
@@ -44,7 +44,7 @@ petuum::PSTableGroup::Init(table_group_config, false);
 
 ### Step 1.2. Create Tables.
 
-You can create several tables, each with the same data type (i.e. the row types registered before). ```table_info.row_type```(row type), ```table_info.row_capacity```(row capacity), ```process_cache_capacity```(maximal number of rows) and ```oplog_capacity```(maximal number of rows that can be written to) are four parameters which are required to be set for each table. Refer to [configs.hpp][3] for more parameters.
+You can create several tables, each with the same data type (i.e. the row types registered before). ```table_info.row_type```(row type), ```table_info.row_capacity```(row capacity), ```process_cache_capacity```(maximal number of rows) and ```oplog_capacity```(maximal number of rows that can be written to) are four parameters which are required to be set for each table. Refer to [configs.hpp](https://github.com/petuum/bosen/blob/master/src/petuum_ps_common/include/configs.hpp#L152) for more parameters.
 
 ```cpp
 petuum::ClientTableConfig table_config;
@@ -126,7 +126,7 @@ And the rest will be taken care of by Bosen.
 
 ### Step 3. Instantiate and Run.
 
-Congratulations! You have now finished all the required steps towards an amazing Petuum Bosen application. To run the application, instantiate an app object and call its ```run(int32_t num_worker_threads)``` function in your main function, as in our [demo main function][4]:
+Congratulations! You have now finished all the required steps towards an amazing Petuum Bosen application. To run the application, instantiate an app object and call its ```run(int32_t num_worker_threads)``` function in your main function, as in our [demo main function](https://github.com/petuum/bosen/blob/master/app/app_demo/src/lr_main.cpp):
 
 ```cpp
 #include "lr_app.hpp" 
@@ -150,12 +150,14 @@ To build the application with Make, you need to do the following:
 2. Include ```defns.mk``` in your makefile. We need defns.mk because it provides:
 
   1) compile flags that are needed to compile the Bosen header files (PETUUM_CXXFLAGS);
+  
   2) external libraries that the Bosen library depends on (PETUUM_LDFLAGS);
+  
   3) As well as paths to search for the external header files (PETUUM_INCFLAGS) and libraries (PETUUM_LDFLAGS). 
 
 3. With the above maros properly defined, you can write a Makefile of your own to compile this application.
 
-We provide a sample [Makefile][5], which should work on most of the Bosen Apps. Remember to change the directories when you use it.
+We provide a sample [Makefile](https://github.com/petuum/bosen/blob/master/app/app_demo/Makefile), which should work on most of the Bosen Apps. Remember to change the directories when you use it.
 
 ## Detailed programming instructions
 
