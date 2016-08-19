@@ -19,7 +19,7 @@ After getting the compilation environment ready, you are good to run Petuum with
 If you have sudo privilege, you can install part of Petuum's dependencies to save compilation time.
 ```
 sudo apt-get -y install libgoogle-glog-dev libzmq3-dev libyaml-cpp-dev \
-  libgoogle-perftools-dev libsnappy-dev libsparsehash-dev libgflags-dev
+  libgoogle-perftools-dev libsnappy-dev libsparsehash-dev libgflags-dev libeigen3-dev
 ```
 Then run the following command to setup Petuum, which takes approximately 10 minutes on a 2-core machine.
 The script will first enable passwordless ssh connection to localhost using default id_rsa.pub key or generate one if without.
