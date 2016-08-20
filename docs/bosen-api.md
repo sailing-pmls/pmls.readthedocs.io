@@ -5,120 +5,132 @@
 Click [here](http://docs.petuum.com/projects/petuum-bosen/en/latest/) for Bosen API Documentations.
 
 ## Write your first Petuum Bosen App
-After you have successfully completed the compilation process, you can follow this tutorial and start writing you first Bosen Application. The code fragments of this tutorial come from our [demo program](https://github.com/petuum/bosen/tree/master/app/app_demo). You can read it when you finish this tutorial.
+After you have successfully completed the compilation process, you can follow this tutorial and start writing you first Bosen Application. The code fragments of this tutorial come from our [demo program](https://github.com/petuum/bosen/tree/master/app/app_demo). Our demo implements logistic regression and tests it on the [UCI Breast Cancer dataset](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29). Enter the [app directory](https://github.com/petuum/bosen/tree/master/app/app_demo) and run the launching script with
+
+```python
+python script/launch.py
+```
+
+You can obtain a result of roughly 92%-93% test accuracy.
 
 ### Step 0. Include the Bosen header file and the Bosen App template file.
 
 ```cpp
 #include <petuum_ps_common/include/petuum_ps.hpp>
-#include <petuum_ps_common/include/ps_application.hpp>
+#include <petuum_ps_common/include/ps_app.hpp>
 ```
 
-The Bosen App template file contains an abstract class ```PsApplication```, which mainly takes care of worker thread spawning, registering, and de-registering processes. All you have to do is to create a subclass (a c-plus-plus class of your bosen application) and implement the pure virtual functions within that class.
+The Bosen App template file contains an abstract class ```PsApp```, which mainly takes care of worker thread spawning, registering, and de-registering processes. All you have to do is to create a subclass (a c-plus-plus class of your bosen application) and implement the pure virtual functions within that class.
 
 ### Step 1. Implement the initialization function.
 
 In this step, you need to implement 
 
 ```cpp
-void Initialize(petuum::TableGroupConfig &table_group_config)
+virtual void InitApp() = 0;
 ```
 
-Initialization tasks such as data loading and table specification should be done here. After data are prepared, follow the steps below.
+Initialization tasks such as data loading should be done here. This function will only be executed in the init thread of each process. After data are prepared, follow the steps below.
 
-### Step 1.0. Register Row types.
+### Step 2. Create Tables.
 
-The Bosen allows applications to use diﬀerent row types. In order for the Bosen to create rows of the correct type, the row types have to be registered with the Bosen before they are created. In this example, we register a row type ```petuum::DenseRow<float>``` with ID ```kDenseRowFloatTypeID``` as:
+Implement the following function, which will return a set of configs of the tables you need.
 
 ```cpp
-petuum::PSTableGroup::RegisterRow<petuum::DenseRow<float> >(kDenseRowFloatTypeID);
+// Return a set of table configuration. See TableConfig struct.
+virtual std::vector<TableConfig> ConfigTables() = 0;
 ```
 
-Then you can refer to the type of a non-sparse row of floating-point numbers as ```kDenseRowFloatTypeID```.
-
-### Step 1.1. Initialize Table Group.
-
-Here you need to set the configurations for the Table Group (i.e. the Parameter Server). Only one table is needed in our example. Refer to [configs.hpp](https://github.com/petuum/bosen/blob/master/src/petuum_ps_common/include/configs.hpp#L57) for the meanings of all table group parameters.
+You can create several tables, each with the same data type. Table configs are specified below:
 
 ```cpp
-table_group_config.num_tables = 1;
-table_group_config.host_map.insert(std::make_pair(0, HostInfo(0, "127.0.0.1", "10000")));
-petuum::PSTableGroup::Init(table_group_config, false);
+struct TableConfig {
+  // Required config for table.
+  std::string name;   // name is used to fetch the table
+  RowType row_type{kUndefinedRow};
+  int64_t num_cols{-1};
+  int64_t num_rows{-1};
+  int staleness{0};
+
+  // Optional configs
+  // Number of rows to cache in process cache. Default -1 means all rows.
+  int64_t num_rows_to_cache{-1};
+  // Estimated upper bound # of pending oplogs in terms of # of rows. Default
+  // -1 means all rows.
+  int64_t num_oplog_rows{-1};
+  // kDenseRowOpLog or kSparseRowOpLog
+  int oplog_type{RowOpLogType::kDenseRowOpLog};
+};
 ```
 
-### Step 1.2. Create Tables.
-
-You can create several tables, each with the same data type (i.e. the row types registered before). ```table_info.row_type```(row type), ```table_info.row_capacity```(row capacity), ```process_cache_capacity```(maximal number of rows) and ```oplog_capacity```(maximal number of rows that can be written to) are four parameters which are required to be set for each table. Refer to [configs.hpp](https://github.com/petuum/bosen/blob/master/src/petuum_ps_common/include/configs.hpp#L152) for more parameters.
+Data types are listed below:
 
 ```cpp
-petuum::ClientTableConfig table_config;
-
-table_config.table_info.row_type = kDenseRowFloatTypeID;
-table_config.table_info.row_capacity = feat_dim;
-table_config.process_cache_capacity = 1;
-table_config.oplog_capacity = 1;
-
-// Here 0 is the table ID, which will be used later to get table.
-bool suc = petuum::PSTableGroup::CreateTable(0, table_config);
+enum RowType {
+  kUndefinedRow = 0
+  , kDenseFloatRow = 1
+  , kDenseIntRow = 2
+  , kSparseFloatRow = 3
+  , kSparseIntRow = 4
+};
 ```
 
-After all tables are created, call
-
-```cpp
-petuum::PSTableGroup::CreateTableDone();
-```
-
-### Step 2. Implement the worker thread function.
-
-In this step, you need to implement
-
-```cpp
-void RunWorkerThread(int threadId)
-```
+### Implement the worker thread function.
 
 This worker function will be executed on each thread when the Bosen is initialized.
 
-### Step 2.0. Gain Table Access.
+```cpp
+virtual void WorkerThread(int client_id, int thread_id) = 0;
+```
 
-In order for the worker thread to handle any parameters stored in Bosen, you first need to get access to the corresponding tables:
+### Step 3. Gain Table Access.
+
+In order for the worker thread to handle any parameters stored in Bosen, you first need to get access to the corresponding tables via table name:
 
 ```cpp
-petuum::Table<float> W = petuum::PSTableGroup::GetTableOrDie<float>(kDenseRowFloatTypeID);
+petuum::Table<float> W = GetTable<float>("w");
 ```
 
 Then you can read or update parameters via the table interface.
 
-### Step 2.1. Initialize parameters (Optional).
+### Step 4. Initialize parameters (Optional).
 
 We use temporary variable ```update_batch``` to store parameter updates before we send it into the ```BatchInc``` update interface. Make sure that you only initialize parameters once.
 
 ```cpp
 if (thread_id == 0) {
-  petuum::DenseUpdateBatch<float> update_batch(0, feat_dim);
-  for (int i = 0; i < feat_dim; ++i) update_batch[i] = (rand() % 1001 - 500) / 500.0;
+  petuum::DenseUpdateBatch<float> update_batch(0, feat_dim_);
+  for (int i = 0; i < feat_dim_; ++i) {
+    update_batch[i] = (rand() % 1001 - 500) / 500.0 * 1000.0;
+  }
   W.DenseBatchInc(0, update_batch);
 }
 ```
 
+### Step 5. Sync after initialization using process_barrier_ from the parent class.
+
 Usually we sync after initialization:
 
 ```cpp
-process_barrier->wait();
+process_barrier_->wait();
 ```
 
-### Step 2.2. Read & Update parameters.
+### Step 6-7. Get/Update parameters.
 
 At the begining of each training epoch, we wish to read the latest parameters from tables, while at the end, we wish to update them. Reading parameters requires you use the ```Get``` interface:
 
 ```cpp
 petuum::RowAccessor row_acc;
-const petuum::DenseRow<float>& r = W.Get<petuum::DenseRow<float> >(0, &row_acc);
-for (int i = 0; i < feat_dim; ++i) paras[i] = r[i];
+const petuum::DenseRow<float>& r = W.Get<petuum::DenseRow<float>>(
+    0, &row_acc);
+for (int i = 0; i < feat_dim_; ++i) {
+  paras_[i] = r[i];
+}
 ```
 
-Updating them requires you use the ```BatchInc``` interface, as in the previous step.
+Updating them requires you use the ```BatchInc``` interface, as in step 4.
 
-### Step 2.3. Don't forget the Clock Tick.
+### Step 8. Don't forget the Clock Tick.
 
 At the end of each training epoch, you need to signal Bosen that this epoch is over by calling:
 
@@ -128,19 +140,12 @@ petuum::PSTableGroup::Clock();
 
 And the rest will be taken care of by Bosen.
 
-### Step 3. Instantiate and Run.
+### Step 9. Instantiate and Run.
 
 Congratulations! You have now finished all the required steps towards an amazing Petuum Bosen application. To run the application, instantiate an app object and call its ```Run(int32_t num_worker_threads)``` function in your main function, as in our [demo main function](https://github.com/petuum/bosen/blob/master/app/app_demo/src/lr_main.cpp):
 
 ```cpp
-#include "lr_app.hpp" 
-
-int main(int argc, char *argv[]) { 
-  LRApp lrapp; 
-  lrapp.Run(2); 
-
-  return 0; 
-} 
+lrapp.Run(FLAGS_num_app_threads);
 ```
 
 You can specify the number of worker threads in your application. The default is ```1```.
@@ -166,3 +171,4 @@ We provide a sample [Makefile](https://github.com/petuum/bosen/blob/master/app/a
 ## Detailed programming instructions
 
 For instructions on how to program with the Petuum v1.1 Bösen Bounded-Async Key-Value store, please consult the following pdf: [Bosen Reference Manual](_downloads/bosen_refman.pdf).
+
