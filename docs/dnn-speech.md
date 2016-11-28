@@ -5,8 +5,8 @@ This tutorial shows how the Deep Neural Network (DNN) application (implemented o
 Our DNN consists of an input layer, arbitrary number of hidden layers and an output layer. Each layer contains a certain amount of neuron units. Each unit in the input layer corresponds to an element in the feature vector. We represent the class label using 1-of-K coding and each unit in the output layer corresponds to a class label. The number of hidden layers and the number of units in each hidden layer are configured by the users. Units between adjacent layers are fully connected. In terms of DNN learning, we use the cross entropy loss and stochastic gradient descent where the gradient is computed using backpropagation method. 
 
 ## Installation
-### Petuum Deep Neural Network Application
-The DNN for Speech Recognition app can be found in `bosen/app/dnn_speech/`. From this point on, all instructions will assume you are in `bosen/app/dnn_speech/`. After building Petuum (as explained earlier in this manual), you can build the DNN from `bosen/app/dnn_speech/` by running
+### PMLS Deep Neural Network Application
+The DNN for Speech Recognition app can be found in `bosen/app/dnn_speech/`. From this point on, all instructions will assume you are in `bosen/app/dnn_speech/`. After building PMLS (as explained earlier in this manual), you can build the DNN from `bosen/app/dnn_speech/` by running
 
 ```
 make
