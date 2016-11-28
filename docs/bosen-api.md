@@ -4,7 +4,7 @@
 
 Click [here](http://docs.petuum.com/projects/petuum-bosen/en/latest/) for Bosen API Documentations.
 
-## Write your first Petuum Bosen App
+## Write your first PMLS Bosen App
 After you have successfully completed the compilation process, you can follow this tutorial and start writing you first Bosen Application. The code fragments of this tutorial come from our [demo program](https://github.com/petuum/bosen/tree/master/app/app_demo). Our demo implements logistic regression and tests it on the [UCI Breast Cancer dataset](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29). Enter the [app directory](https://github.com/petuum/bosen/tree/master/app/app_demo) and run the launching script with
 
 ```python
@@ -150,7 +150,7 @@ lrapp.Run(FLAGS_num_app_threads);
 
 You can specify the number of worker threads in your application. The default is ```1```.
 
-## Build your Petuum Bosen App
+## Build your PMLS Bosen App
 
 To build the application with Make, you need to do the following:
 
@@ -170,5 +170,5 @@ We provide a sample [Makefile](https://github.com/petuum/bosen/blob/master/app/a
 
 ## Detailed programming instructions
 
-For instructions on how to program with the Petuum v1.1 Bösen Bounded-Async Key-Value store, please consult the following pdf: [Bosen Reference Manual](_downloads/bosen_refman.pdf).
+For instructions on how to program with the PMLS v1.1 Bösen Bounded-Async Key-Value store, please consult the following pdf: [Bosen Reference Manual](_downloads/bosen_refman.pdf).
 
