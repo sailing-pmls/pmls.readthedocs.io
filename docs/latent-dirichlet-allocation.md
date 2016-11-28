@@ -6,7 +6,7 @@ After compiling Strads, we can test that it is working correctly with Latent Dir
 
 Topic modeling, a.k.a Latent Dirichlet Allocation (LDA), is an algorithm that discovers latent semantic structure from documents. LDA finds global topics, which are weighted vocabularies, and the topical composition of each document in the collection.
 
-Petuum's Strads LDA app uses a new model-parallel Gibbs sampling scheme described in this 2014 [NIPS paper](http://www.cs.cmu.edu/~epxing/papers/2014/STRADS_NIPS14.pdf), and implemented on top of the Strads scheduler. The documents are partitioned onto different machines, which take turns to sample disjoint subsets of words. By keeping the word subsets disjoint, our model-parallel implementation exhibits improved convergence times and memory utilization over data-parallel strategies. We use the sparse Gibbs sampling procedure in Yao et al (2009).
+PMLS's Strads LDA app uses a new model-parallel Gibbs sampling scheme described in this 2014 [NIPS paper](http://www.cs.cmu.edu/~epxing/papers/2014/STRADS_NIPS14.pdf), and implemented on top of the Strads scheduler. The documents are partitioned onto different machines, which take turns to sample disjoint subsets of words. By keeping the word subsets disjoint, our model-parallel implementation exhibits improved convergence times and memory utilization over data-parallel strategies. We use the sparse Gibbs sampling procedure in Yao et al (2009).
 
 ## Performance 
 
@@ -14,7 +14,7 @@ The Strads LDA app can train an LDA model with 1K topics, from a corpus with 8M 
 
 ## Quick start
 
-Petuum LDA uses the **Strads** scheduler, and can be found in `strads/apps/lda_release/`. **From this point on, all instructions will assume you are in `strads/apps/lda_release/`.** After building Strads (as explained under Installation), you may build the LDA app from `strads/apps/lda_release/` by running
+PMLS LDA uses the **Strads** scheduler, and can be found in `strads/apps/lda_release/`. **From this point on, all instructions will assume you are in `strads/apps/lda_release/`.** After building Strads (as explained under Installation), you may build the LDA app from `strads/apps/lda_release/` by running
 
 ```
 make
@@ -101,4 +101,4 @@ Strads requires a machine file - `singlemach.vm` in the above example. Strads ma
 127.0.0.1
 ```
 
-To prepare a multi-machine file, please refer to the Strads section under [Configuration Files for Petuum Apps](configuration.md).
+To prepare a multi-machine file, please refer to the Strads section under [Configuration Files for PMLS Apps](configuration.md).
