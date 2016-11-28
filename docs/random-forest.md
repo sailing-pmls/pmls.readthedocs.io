@@ -4,7 +4,7 @@ A [Random Forest] is a classification algorithm that uses a large number of deci
 
 ## Quick Start
 
-Random Forest can be found in `bosen/app/rand_forest`. From this point on, all instructions will assume you are in `bosen/app/rand_forest`.  After building the main Petuum libraries (as explained earlier in this manual), you can build the Rand Forest app from `bosen/app/rand_forest` by running
+Random Forest can be found in `bosen/app/rand_forest`. From this point on, all instructions will assume you are in `bosen/app/rand_forest`.  After building the main PMLS libraries (as explained earlier in this manual), you can build the Rand Forest app from `bosen/app/rand_forest` by running
 
 ```
 make -j2
