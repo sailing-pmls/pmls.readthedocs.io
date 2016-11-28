@@ -12,7 +12,7 @@ On a dataset with 1M data instances; 22K feature dimension; 22M parameters, the 
 
 ## Quick Start
 
-The Sparse Coding app can be found in `bosen/app/sparsecoding/`. From this point on, all instructions will assume you are in `bosen/app/sparsecoding/`. After building Petuum (as explained earlier in this manual), you can build the Sparse Coding app from `bosen/app/sparsecoding` by running
+The Sparse Coding app can be found in `bosen/app/sparsecoding/`. From this point on, all instructions will assume you are in `bosen/app/sparsecoding/`. After building PMLS (as explained earlier in this manual), you can build the Sparse Coding app from `bosen/app/sparsecoding` by running
 
 ```
 make
