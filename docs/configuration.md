@@ -2,21 +2,21 @@
 
 ## Make sure password-less SSH is set up correctly
 
-This is the most common issue people have when running Petuum. Please read!
+This is the most common issue people have when running PMLS. Please read!
 
-**You must be able to `ssh` into all machines without a password - even if you are only using your local machine.** The Petuum apps will fail in unexpected ways if password-less `ssh` is not working. When this happens, you will not see any error output stating that this is the problem!
+**You must be able to `ssh` into all machines without a password - even if you are only using your local machine.** The PMLS apps will fail in unexpected ways if password-less `ssh` is not working. When this happens, you will not see any error output stating that this is the problem!
 
-**Hence, you will save yourself a lot of trouble by taking the time to ensure password-less `ssh` actually works, before you attempt to run the Petuum apps.** For example, if you are going to run Petuum on your local machine, make sure that `ssh 127.0.0.1` logs you in without asking for a password. See [Installing Petuum](installation.md) for instructions on how to do this.
+**Hence, you will save yourself a lot of trouble by taking the time to ensure password-less `ssh` actually works, before you attempt to run the PMLS apps.** For example, if you are going to run PMLS on your local machine, make sure that `ssh 127.0.0.1` logs you in without asking for a password. See [Installing PMLS](installation.md) for instructions on how to do this.
 
 ## Bösen and Strads
 
-Petuum includes two platforms for writing and running ML applications: Bösen for data-parallel execution, and Strads for model-parallel execution. Each Petuum ready-to-run application is either a Bösen application, or a Strads application. The two systems use different machine configuration files; please see the following guides.
+PMLS includes two platforms for writing and running ML applications: Bösen for data-parallel execution, and Strads for model-parallel execution. Each PMLS ready-to-run application is either a Bösen application, or a Strads application. The two systems use different machine configuration files; please see the following guides.
 
-**Note: This page explains machine configuration for non-YARN, stand-alone operation. If you are looking to run Petuum on YARN, please see [this page](https://github.com/petuum/bosen/wiki/Running-on-YARN-HDFS).**
+**Note: This page explains machine configuration for non-YARN, stand-alone operation. If you are looking to run PMLS on YARN, please see [this page](https://github.com/petuum/bosen/wiki/Running-on-YARN-HDFS).**
 
 ## Bösen configuration files
 
-Some Petuum ML applications require Bösen configuration files, in the following format:
+Some PMLS ML applications require Bösen configuration files, in the following format:
 
 ```
 0 ip_address_0 9999
@@ -46,11 +46,11 @@ Simply create this localhost configuration file:
 
 ## My cluster does not have shared directories
 
-Petuum is meant to be used from a shared filesystem, such as NFS - you can find instructions for how to set up NFS on Ubuntu machines [here](https://help.ubuntu.com/14.04/serverguide/network-file-system.html).
+PMLS is meant to be used from a shared filesystem, such as NFS - you can find instructions for how to set up NFS on Ubuntu machines [here](https://help.ubuntu.com/14.04/serverguide/network-file-system.html).
 
-If you don't have NFS, you can still run Petuum, but you need to pay attention to the following points:
+If you don't have NFS, you can still run PMLS, but you need to pay attention to the following points:
 
-Make sure that Petuum is compiled on every machine, and the machine configuration files are present on every machine. The paths to Petuum and machine configuration files must be identical across machines.
+Make sure that PMLS is compiled on every machine, and the machine configuration files are present on every machine. The paths to PMLS and machine configuration files must be identical across machines.
 
 Different apps have different requirements for input data; if no requirements are explicitly stated, you should make sure the input data is present on every machine.
 
@@ -60,13 +60,13 @@ Some apps store their arguments and parameters in script files. If you modify th
 
 **You cannot `crtl-c` to terminate a Bösen app**, because they are invoked in the background via `ssh`. Each Bösen app comes with a kill script for this purpose; please see the individual app sections in this manual for instructions.
 
-If you want to simultaneously run two Petuum apps on the same machines, make sure you give them separate Bösen configuration files with different starting ports, separated by at least 1000 (e.g. 9999 and 10999). **The apps cannot share the same port ranges!**
+If you want to simultaneously run two PMLS apps on the same machines, make sure you give them separate Bösen configuration files with different starting ports, separated by at least 1000 (e.g. 9999 and 10999). **The apps cannot share the same port ranges!**
 
-If you cannot run an app - especially if you see error messages with “Check failure stack trace” - the cause is probably another running (or hung) Petuum app using the same ports. In that case, you should use the offending app's kill script to terminate it.
+If you cannot run an app - especially if you see error messages with “Check failure stack trace” - the cause is probably another running (or hung) PMLS app using the same ports. In that case, you should use the offending app's kill script to terminate it.
 
 ## Strads configuration files
 
-Some Petuum ML applications require Strads machine configuration files, which are simply a list of machine IP addresses (like an MPI hostfile). Unlike Bösen configuration files, Strads configuration files may repeat IP addresses.
+Some PMLS ML applications require Strads machine configuration files, which are simply a list of machine IP addresses (like an MPI hostfile). Unlike Bösen configuration files, Strads configuration files may repeat IP addresses.
 
 Strads creates three types of processes: Workers, the Scheduler, and the Coordinator.
 - The Coordinator is the master process that oversees the Scheduler and Workers, and is spawned on the last IP in the machine file.
@@ -117,11 +117,11 @@ If you only have 1 machine, use this Strads machine file with 2 Workers (plus th
 
 ## My cluster does not have shared directories
 
-Petuum is meant to be used from a shared filesystem, such as NFS - you can find instructions for how to set up NFS on Ubuntu machines [here](https://help.ubuntu.com/14.04/serverguide/network-file-system.html).
+PMLS is meant to be used from a shared filesystem, such as NFS - you can find instructions for how to set up NFS on Ubuntu machines [here](https://help.ubuntu.com/14.04/serverguide/network-file-system.html).
 
-If you don't have NFS, you can still run Petuum, but you need to pay attention to the following points:
+If you don't have NFS, you can still run PMLS, but you need to pay attention to the following points:
 
-Make sure that Petuum is compiled on every machine, and the machine configuration files are present on every machine. The paths to Petuum and machine configuration files must be identical across machines.
+Make sure that PMLS is compiled on every machine, and the machine configuration files are present on every machine. The paths to PMLS and machine configuration files must be identical across machines.
 
 Different apps have different requirements for input data; if no requirements are explicitly stated, you should make sure the input data is present on every machine.
 
