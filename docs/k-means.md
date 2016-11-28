@@ -2,7 +2,7 @@
 K-means is a clustering algorithm, which identifies cluster centers based on Euclidean distances. Our K-Means app on **Bösen** uses the Mini-Batch K-means algorithm [1].
 
 ## Quick Start
-The app can be found at `bosen/app/kmeans`. From this point on, all instructions will assume you are at `bosen/app/kmeans`. After building the main Petuum libraries, you can build kmeans:
+The app can be found at `bosen/app/kmeans`. From this point on, all instructions will assume you are at `bosen/app/kmeans`. After building the main PMLS libraries, you can build kmeans:
 
 ```
 make -j2
@@ -117,7 +117,7 @@ python data_generate.py 10 10 100 libsvm
 
 
 ## Setting up machines
-Put the desired machine IP addresses in the Parameter Server machine file. See this page for more information: [Configuration Files for Petuum apps](configuration.md).
+Put the desired machine IP addresses in the Parameter Server machine file. See this page for more information: [Configuration Files for PMLS apps](configuration.md).
 
 ## Common Parameters
 In `script/launch.py.template' and `script/run_local.py.template`:
