@@ -15,7 +15,7 @@ make ml_lib
 
 ## Quick Start
 
-Petuum MLR can be found in `bosen/app/mlr`. From this point on, all instructions will assume you are in `bosen/app/mlr`.  After building the main Petuum libraries (as explained earlier in this manual), you can build the MLR app from `bosen/app/mlr` by running
+PMLS MLR can be found in `bosen/app/mlr`. From this point on, all instructions will assume you are in `bosen/app/mlr`.  After building the main PMLS libraries (as explained earlier in this manual), you can build the MLR app from `bosen/app/mlr` by running
 
 ```
 make -j2
@@ -188,7 +188,7 @@ With the data in place, let's look at the input parameters for MLR in `script/la
     * `init_lr` and `lr_decay_rate`: Learning rate is `init_lr*lr_decay_rate^T` where `T` is the epoch number.
 
 - System Parameters:
-    * `hostfile="scripts/localserver"`: Machine file. See [[Configuration Files for Petuum Apps|Configuration Files for Petuum Apps]]
+    * `hostfile="scripts/localserver"`: Machine file. See [Configuration Files for PMLS Apps](configuration.md)
     * `num_app_threads=4`: Number of application worker threads.
     * `staleness=0`: Staleness for the weight table (the main table).
     * `num_comm_channels_per_client=1`: The number of threads running server and back ground communication. Usually 1~2 is good enough.
