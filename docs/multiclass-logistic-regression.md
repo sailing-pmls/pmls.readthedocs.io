@@ -137,7 +137,7 @@ MLR accepts both libsvm format (good for data with sparse features) and dense bi
 1 1:0.195157 2:0.771602 3:-0.680908 4:2.20452 5:1.22779 6:2.26125 7:-0.379156 8:1.24836 9:1.05749 10:2.58174 11:1 43:1
 ```
 
-where the first column is the class label and the rest are `feature_id:feature_value` pairs. Similarly for the covtype test data `datasets/covtype.scale.test.small`. Each data file is associated with a meta data. For example, the covtype training data has meta file `datasets/covtype.scale.train.small.meta` with the following fields:
+where the first column is the class label and the rest are `feature_id:feature_value` pairs.  Each data file is associated with a meta data. For example, the covtype training data has meta file `datasets/covtype.scale.train.small.meta` with the following fields:
 
 - num_train_total: Number of training data.
 - num_train_this_partition: Number of training data in this partition (different from num_train_total if partitioned)
@@ -148,7 +148,16 @@ where the first column is the class label and the rest are `feature_id:feature_v
 - label_one_based: 1 if class label starts at 1 instead of 0.
 - snappy_compressed: 1 if the file is compressed by [Snappy](https://code.google.com/p/snappy/) which often leads to 2~4x reduction in size.
 
-Similarly for test set meta file `datasets/covtype.scale.test.small.meta`.
+Similarly, the covtype test data has meta file `datasets/covtype.scale.test.small.meta` with the following fields:
+
+- num_data: Number of test data
+- num_test: Number of data to use in test
+- feature_dim: Number of features
+- num_labels: Number of classes.
+- format: Data format: libsvm or bin.
+- feature_one_based: 1 if feature id starts at 1 instead of 0.
+- label_one_based: 1 if class label starts at 1 instead of 0.
+- snappy_compressed: 1 if the file is compressed by [Snappy](https://code.google.com/p/snappy/) which often leads to 2~4x reduction in size.
 
 ## Synthetic Data
 
@@ -188,7 +197,11 @@ With the data in place, let's look at the input parameters for MLR in `script/la
     * `init_lr` and `lr_decay_rate`: Learning rate is `init_lr*lr_decay_rate^T` where `T` is the epoch number.
 
 - System Parameters:
+<<<<<<< HEAD
+    * `hostfile="scripts/localserver"`: Machine file. See Configuration page for more details.
+=======
     * `hostfile="scripts/localserver"`: Machine file. See [Configuration Files for PMLS Apps](configuration.md)
+>>>>>>> 45f3aef19b7152701f51e72148f0f2008fe1e7c2
     * `num_app_threads=4`: Number of application worker threads.
     * `staleness=0`: Staleness for the weight table (the main table).
     * `num_comm_channels_per_client=1`: The number of threads running server and back ground communication. Usually 1~2 is good enough.
