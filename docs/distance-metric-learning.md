@@ -14,7 +14,7 @@ Going from 1 to 4 machines results in a speedup of roughly 3.75x.
 
 ## Quick start
 
-The DML app can be found in `bosen/app/dml/`. **From this point on, all instructions will assume you are in `bosen/app/dml/`.** After building Petuum (as explained earlier in this manual), you can build the DML app from `bosen/app/dml` by running
+The DML app can be found in `bosen/app/dml/`. **From this point on, all instructions will assume you are in `bosen/app/dml/`.** After building PMLS (as explained earlier in this manual), you can build the DML app from `bosen/app/dml` by running
 
 ```
 make

@@ -197,7 +197,11 @@ With the data in place, let's look at the input parameters for MLR in `script/la
     * `init_lr` and `lr_decay_rate`: Learning rate is `init_lr*lr_decay_rate^T` where `T` is the epoch number.
 
 - System Parameters:
+<<<<<<< HEAD
     * `hostfile="scripts/localserver"`: Machine file. See Configuration page for more details.
+=======
+    * `hostfile="scripts/localserver"`: Machine file. See [Configuration Files for PMLS Apps](configuration.md)
+>>>>>>> 45f3aef19b7152701f51e72148f0f2008fe1e7c2
     * `num_app_threads=4`: Number of application worker threads.
     * `staleness=0`: Staleness for the weight table (the main table).
     * `num_comm_channels_per_client=1`: The number of threads running server and back ground communication. Usually 1~2 is good enough.

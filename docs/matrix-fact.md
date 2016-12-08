@@ -6,7 +6,7 @@ MF is commonly used to perform Collaborative Filtering, where `A` represents the
 
 `A(i,j) = W(i,1)*H(1,i) + W(i,2)*H(2,i) + ... + W(i,K)*H(K,i)`
 
-The Petuum MF app uses a model-parallel coordinate descent scheme, implemented on the Strads scheduler. If you would like to use the older Bösen-based Petuum MF app, you may obtain it from the [Petuum v0.93 release](https://github.com/petuum/bosen/tree/v0.9.3).
+The PMLS MF app uses a model-parallel coordinate descent scheme, implemented on the Strads scheduler. If you would like to use the older Bösen-based PMLS MF app, you may obtain it from the [PMLS v0.93 release](https://github.com/petuum/bosen/tree/v0.9.3).
 
 ## Performance 
 
@@ -14,7 +14,7 @@ The Strads MF app finishes training on the Netflix dataset (480k by 20k matrix) 
 
 ## Quick start
 
-Petuum MF uses the Strads scheduler, and can be found in `src/strads/apps/cdmf_release/`. **From this point on, all instructions will assume you are in `src/strads/apps/cdmf_release/`.** After building the main Petuum libraries (as explained under Installation), you may build the MF app from `src/strads/apps/cdmf_release/` by running
+PMLS MF uses the Strads scheduler, and can be found in `src/strads/apps/cdmf_release/`. **From this point on, all instructions will assume you are in `src/strads/apps/cdmf_release/`.** After building the main PMLS libraries (as explained under Installation), you may build the MF app from `src/strads/apps/cdmf_release/` by running
 
 ```
 make
@@ -90,7 +90,7 @@ The basic options are:
 * `threads`: How many threads to use for each worker.
 * `rank`: The desired decomposition rank K.
 * `iterations`: How many iterations to run.
-* `lambda_param`: Regularization parameter (Petuum MF uses an L2 regularizer)
+* `lambda_param`: Regularization parameter (PMLS MF uses an L2 regularizer)
 * `machfile`: Strads machine file; see below for details.
 
 Strads requires a machine file - `singlemach.vm` in the above example. Strads machine files control which machines house Workers, the Scheduler, and the Coordinator (the 3 architectural elements of Strads). In `singlemach.vm`, we spawn all element processes on the local machine `127.0.0.1`, so the file simply looks like this:
@@ -102,4 +102,4 @@ Strads requires a machine file - `singlemach.vm` in the above example. Strads ma
 127.0.0.1
 ```
 
-To prepare a multi-machine file, please refer to the Strads section under [Configuration Files for Petuum Apps](configuration.md).
+To prepare a multi-machine file, please refer to the Strads section under [Configuration Files for PMLS Apps](configuration.md).

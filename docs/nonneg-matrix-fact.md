@@ -12,7 +12,7 @@ Our NMF app uses the projected Stochastic Gradient Descent (SGD) algorithm to le
 
 ## Quick Start
 
-The NMF app can be found in `bosen/app/NMF/`. From this point on, all instructions will assume you are in `bosen/app/NMF/`. After building Petuum (as explained earlier in this manual), you can build the NMF app from `bosen/app/NMF` by running
+The NMF app can be found in `bosen/app/NMF/`. From this point on, all instructions will assume you are in `bosen/app/NMF/`. After building PMLS (as explained earlier in this manual), you can build the NMF app from `bosen/app/NMF` by running
 
 ```
 make

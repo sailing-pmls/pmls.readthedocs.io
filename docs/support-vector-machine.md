@@ -1,5 +1,5 @@
 # Support Vector Machine
-Petuum provides a SVM solver on distributed system. SVM application can be found in `strads/apps/svm_release/`. From this point on, all instructions will assume you are in `strads/apps/svm_release/`.
+PMLS provides a SVM solver on distributed system. SVM application can be found in `strads/apps/svm_release/`. From this point on, all instructions will assume you are in `strads/apps/svm_release/`.
 
 After building the Strads system (as explained in the installation page), you may build the the SVM solver from `strads/apps/svm_release/` by running 
 
@@ -41,7 +41,7 @@ col value
 Each row with column id and value represents a non-zero model-parameter.
 
 ## Machine configuration 
-See [Strads configuration files](https://github.com/petuum/bosen/wiki/Configuration-Files-for-Petuum-Apps#strads-configuration-files)
+See [Strads configuration files](configuration.md)
 
 ## Program Options 
 The SVM is launched using a python script, e.g. svm.py.

@@ -1,6 +1,6 @@
-Petuum Tutorial and Quick Start
+PMLS Tutorial and Quick Start
 ========
-The fastest way to get started with Petuum is to use this [script](https://gist.github.com/holyglenn/dc3a2b8a5d496735a0a297b0d5ec3479/raw/47442c52181545f40b4302c6ebdb19c25c75d433/petuum.py), which will setup Bösen and Strads systems on a single machine with just 1 command. 
+The fastest way to get started with PMLS is to use this [script](https://gist.github.com/holyglenn/dc3a2b8a5d496735a0a297b0d5ec3479/raw/47442c52181545f40b4302c6ebdb19c25c75d433/petuum.py), which will setup Bösen and Strads systems on a single machine with just 1 command. 
 After setting it up, you can run two demo applications to verify that they are working.
 To get the script:
 ```
@@ -14,17 +14,17 @@ If you do not have sudo privilege, please contact your administrator for help.
 sudo apt-get -y update && sudo apt-get -y install g++ make autoconf git libtool uuid-dev openssh-server cmake libopenmpi-dev openmpi-bin libssl-dev libnuma-dev python-dev python-numpy python-scipy python-yaml protobuf-compiler subversion libxml2-dev libxslt-dev zlibc zlib1g zlib1g-dev libbz2-1.0 libbz2-dev
 ```
 
-After getting the compilation environment ready, you are good to run Petuum with or without sudo.
+After getting the compilation environment ready, you are good to run PMLS with or without sudo.
 
-If you have sudo privilege, you can install part of Petuum's dependencies to save compilation time.
+If you have sudo privilege, you can install part of PMLS's dependencies to save compilation time.
 ```
 sudo apt-get -y install libgoogle-glog-dev libzmq3-dev libyaml-cpp-dev \
   libgoogle-perftools-dev libsnappy-dev libsparsehash-dev libgflags-dev libeigen3-dev
 ```
-Then run the following command to setup Petuum, which takes approximately 10 minutes on a 2-core machine.
+Then run the following command to setup PMLS, which takes approximately 10 minutes on a 2-core machine.
 The script will first enable passwordless ssh connection to localhost using default id_rsa.pub key or generate one if without.
 Then it will download and compile Bösen and Strads systems and their customized dependencies.
-By default Petuum is under `~/petuum_test`. 
+By default PMLS is under `~/petuum_test`. 
 ```
 python petuum.py setup
 ```
@@ -32,13 +32,13 @@ python petuum.py setup
 
 
 If you don't have sudo, run the setup command with `--no-sudo` argument. 
-In addition to the setup process above, the script will compile all Petuum's dependencies and install them in its local folder.
+In addition to the setup process above, the script will compile all PMLS's dependencies and install them in its local folder.
 This process takes about 20 minutes.
 ```
 python petuum.py setup --no-sudo
 ```
 
-Now Petuum is ready to go. To run the Multi-class Logistic Regression demo (in Bösen system), 
+Now PMLS is ready to go. To run the Multi-class Logistic Regression demo (in Bösen system), 
 ```
 python petuum.py run_mlr
 ```
@@ -70,4 +70,4 @@ python petuum.py display_topics
 ```
 
 If you seek further deployment or prefer a more detailed hands-on experience, please refer to the [full installation guide](installation.md) or the [manual](index.md).
-Also check out [Poseiden](https://github.com/petuum/poseidon/wiki#quick-start), the multi-GPU distributed deep learning framework of Petuum.
+Also check out [Poseiden](https://github.com/petuum/poseidon/wiki#quick-start), the multi-GPU distributed deep learning framework of PMLS.

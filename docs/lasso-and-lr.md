@@ -1,5 +1,5 @@
 # Lasso and Logistic Regression
-Petuum provides a linear solver for Lasso and Logistic Regression, using the **Strads** scheduler system. These apps can be found in `strads/apps/linear-solver_release/`. From this point on, all instructions will assume you are in `strads/apps/linear-solver_release/`.
+PMLS provides a linear solver for Lasso and Logistic Regression, using the **Strads** scheduler system. These apps can be found in `strads/apps/linear-solver_release/`. From this point on, all instructions will assume you are in `strads/apps/linear-solver_release/`.
 
 After building the Strads system (as explained in the installation page), you may build the the linear solver from `strads/apps/linear-solver_release/` by running 
 
@@ -54,7 +54,7 @@ The output file of Lasso/LR also follows the MatrixMarket format, and looks some
 This represents the model weights as a single row vector.
 
 ## Machine configuration 
-See [Strads configuration files](https://github.com/petuum/bosen/wiki/Configuration-Files-for-Petuum-Apps#strads-configuration-files)
+See [Strads configuration files](configuration.md)
 
 ## Program Options 
 The Lasso/LR is launched using a python script, e.g. lasso.py/logistic.py.

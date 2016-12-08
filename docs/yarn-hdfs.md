@@ -1,6 +1,6 @@
-# Petuum YARN+HDFS support
+# PMLS YARN+HDFS support
 
-As of version 1.1, Petuum includes support for running apps on YARN and HDFS (Hadoop version 2.4 or later). To enable support for YARN and HDFS, please follow the instructions below.
+As of version 1.1, PMLS includes support for running apps on YARN and HDFS (Hadoop version 2.4 or later). To enable support for YARN and HDFS, please follow the instructions below.
 
 ## Preliminaries
 
@@ -8,9 +8,9 @@ As of version 1.1, Petuum includes support for running apps on YARN and HDFS (Ha
 * **`hadoop` command is working on every machine.**
 * **Java 7 or higher is installed.**
 
-First, install Petuum on every machine in the YARN cluster, as described in [Installation](installation.md). You may install Petuum to the local filesystem; NFS is not required for YARN operation.
+First, install PMLS on every machine in the YARN cluster, as described in [Installation](installation.md). You may install PMLS to the local filesystem; NFS is not required for YARN operation.
 
-Second, you will need to install Gradle to build the Petuum Java components required for YARN. Follow the instructions on the [Gradle webpage](http://gradle.org) to install Gradle, and ensure that the command `gradle` (from the `bin` subdirectory) is in your PATH.
+Second, you will need to install Gradle to build the PMLS Java components required for YARN. Follow the instructions on the [Gradle webpage](http://gradle.org) to install Gradle, and ensure that the command `gradle` (from the `bin` subdirectory) is in your PATH.
 
 **We do not recommend installing Gradle via `apt-get` on Ubuntu 14.04, as the repository version may be out of date.**
 
@@ -78,7 +78,7 @@ YARN/HDFS support for Strads will be coming in a future update.
 
 ### Running out of virtual memory when using YARN
 
-If you are running out of virtual memory when launching Petuum apps via YARN, you may need to edit `$HADOOP_CONF_DIR/yarn-site.xml` in order to increase the maximum amount of virtual memory that can be allocated to containers. Search for the lines
+If you are running out of virtual memory when launching PMLS apps via YARN, you may need to edit `$HADOOP_CONF_DIR/yarn-site.xml` in order to increase the maximum amount of virtual memory that can be allocated to containers. Search for the lines
 
 ```
 <property> 

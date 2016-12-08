@@ -10,7 +10,7 @@ On a dataset with 1M data instances; 360 feature dimension; 24M parameters, the 
 Going from 1 to 6 machines results in a speedup of roughly 4.1x.
 
 ## Quick start
-The DNN app can be found in `bosen/app/dnn`. From this point on, all instructions will assume you are in `bosen/app/dnn`. After building Petuum (as explained earlier in this manual), you can build the DNN app from `bosen/app/dnn` by running
+The DNN app can be found in `bosen/app/dnn`. From this point on, all instructions will assume you are in `bosen/app/dnn`. After building PMLS (as explained earlier in this manual), you can build the DNN app from `bosen/app/dnn` by running
 ```
 make
 ```
