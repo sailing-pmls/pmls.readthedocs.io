@@ -2,7 +2,7 @@
 
 ## Bosen API Documentation
 
-Click [here](http://docs.petuum.com/projects/petuum-bosen/en/latest/) for Bosen API Documentations.
+Click [here](http://pmls-bosen.readthedocs.io/en/latest/) for Bosen API Documentations.
 
 ## Write your first PMLS Bosen App
 After you have successfully completed the compilation process, you can follow this tutorial and start writing you first Bosen Application. The code fragments of this tutorial come from our [demo program](https://github.com/sailing-pmls/bosen/tree/master/app/app_demo). Our demo implements logistic regression and tests it on the [UCI Breast Cancer dataset](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29). Enter the [app directory](https://github.com/sailing-pmls/bosen/tree/master/app/app_demo) and run the launching script with
@@ -142,7 +142,7 @@ And the rest will be taken care of by Bosen.
 
 ### Step 9. Instantiate and Run.
 
-Congratulations! You have now finished all the required steps towards an amazing Petuum Bosen application. To run the application, instantiate an app object and call its ```Run(int32_t num_worker_threads)``` function in your main function, as in our [demo main function](https://github.com/petuum/bosen/blob/master/app/app_demo/src/lr_main.cpp):
+Congratulations! You have now finished all the required steps towards an amazing PMLS Bosen application. To run the application, instantiate an app object and call its ```Run(int32_t num_worker_threads)``` function in your main function, as in our [demo main function](https://github.com/sailing-pmls/bosen/blob/master/app/app_demo/src/lr_main.cpp):
 
 ```cpp
 lrapp.Run(FLAGS_num_app_threads);
@@ -166,7 +166,7 @@ To build the application with Make, you need to do the following:
 
 3. With the above maros properly defined, you can write a Makefile of your own to compile this application.
 
-We provide a sample [Makefile](https://github.com/petuum/bosen/blob/master/app/app_demo/Makefile), which should work on most of the Bosen Apps. Remember to change the directories when you use it.
+We provide a sample [Makefile](https://github.com/sailing-pmls/bosen/blob/master/app/app_demo/Makefile), which should work on most of the Bosen Apps. Remember to change the directories when you use it.
 
 ## Detailed programming instructions
 
