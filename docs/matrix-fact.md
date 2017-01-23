@@ -6,7 +6,7 @@ MF is commonly used to perform Collaborative Filtering, where `A` represents the
 
 `A(i,j) = W(i,1)*H(1,i) + W(i,2)*H(2,i) + ... + W(i,K)*H(K,i)`
 
-The PMLS MF app uses a model-parallel coordinate descent scheme, implemented on the Strads scheduler. If you would like to use the older Bösen-based PMLS MF app, you may obtain it from the [PMLS v0.93 release](https://github.com/petuum/bosen/tree/v0.9.3).
+The PMLS MF app uses a model-parallel coordinate descent scheme, implemented on the Strads scheduler. If you would like to use the older Bösen-based PMLS MF app, you may obtain it from the [PMLS v0.93 release](https://github.com/sailing-pmls/bosen/tree/v0.9.3).
 
 ## Performance 
 
