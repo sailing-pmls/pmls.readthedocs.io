@@ -31,12 +31,12 @@
 Parallel ML System (PMLS) is a distributed machine learning framework. It takes care of the difficult system "plumbing work", allowing you to focus on the ML. PMLS runs efficiently at scale on research clusters and cloud compute like Amazon EC2 and Google GCE.
 
 The PMLS project is organized into 4 open-source (BSD 3-clause license) Github repositories:
-* [Bösen (C++ bounded-async key-value store)](https://github.com/petuum/bosen)
-* [Strads (C++ model-parallel scheduler)](https://github.com/petuum/strads)
-* [JBösen (Java bounded-async key-value store)](https://github.com/petuum/jbosen)
-* [Poseidon (Deep Learning framework)](https://github.com/petuum/poseidon)
+* [Bösen (C++ bounded-async key-value store)](https://github.com/sailing-pmls/bosen)
+* [Strads (C++ model-parallel scheduler)](https://github.com/sailing-pmls/strads)
+* [JBösen (Java bounded-async key-value store)](https://github.com/sailing-pmls/jbosen)
+* [Poseidon (Deep Learning framework)](https://github.com/sailing-pmls/poseidon)
 
-To install Bösen and Strads, please continue reading this manual. If you have a Java environment and want to use JBösen, please start [here](https://github.com/petuum/jbosen/wiki). If you wish to use Poseidon for Deep Learning, please go [here](https://github.com/petuum/poseidon/wiki).
+To install Bösen and Strads, please continue reading this manual. If you have a Java environment and want to use JBösen, please start [here](https://github.com/sailing-pmls/jbosen/wiki). If you wish to use Poseidon for Deep Learning, please go [here](https://github.com/sailing-pmls/poseidon/wiki).
 
 ## PMLS Bösen/Strads v1.1 manual
 
@@ -50,7 +50,7 @@ To install Bösen and Strads, please continue reading this manual. If you have a
         1. [Latent Dirichlet Allocation (topic modeling)](latent-dirichlet-allocation.md)
         1. [MedLDA (supervised topic modeling)](med-lda.md)
     1. Deep Learning
-        1. [Poseidon: Distributed Deep Learning Framework on PMLS](https://github.com/petuum/poseidon/wiki)
+        1. [Poseidon: Distributed Deep Learning Framework on PMLS](https://github.com/sailing-pmls/poseidon/wiki)
         1. [General-purpose Deep Neural Network (DNN)](dnn-general.md)
             1. [DNN for Speech Recognition](dnn-speech.md)
     1. Matrix Factorization and Sparse Coding
