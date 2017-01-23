@@ -12,7 +12,7 @@ This is the most common issue people have when running PMLS. Please read!
 
 PMLS includes two platforms for writing and running ML applications: Bösen for data-parallel execution, and Strads for model-parallel execution. Each PMLS ready-to-run application is either a Bösen application, or a Strads application. The two systems use different machine configuration files; please see the following guides.
 
-**Note: This page explains machine configuration for non-YARN, stand-alone operation. If you are looking to run PMLS on YARN, please see [this page](https://github.com/sailing-pmls/bosen/wiki/Running-on-YARN-HDFS).**
+**Note: This page explains machine configuration for non-YARN, stand-alone operation. If you are looking to run PMLS on YARN, please see [this page](yarn-hdfs.md).**
 
 ## Bösen configuration files
 
