@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Petuum documentation build configuration file, created by
+# PMLS documentation build configuration file, created by
 # sphinx-quickstart on Mon Jun  6 16:01:54 2016.
 #
 # This file is execfile()d with the current directory set to its
