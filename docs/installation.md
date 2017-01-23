@@ -59,7 +59,7 @@ The first make builds Strads, and the second and third makes build Bösen and it
 
 Run the following commands to download PMLS Bösen.
 ```
-git clone https://github.com/petuum/bosen.git
+git clone https://github.com/sailing-pmls/bosen.git
 ```
 
 **For each machine that PMLS will be running on**, execute the following commands to install dependencies and libraries.
