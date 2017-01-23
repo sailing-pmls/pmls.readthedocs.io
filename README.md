@@ -1,2 +1,2 @@
-# petuum.readthedocs.io
+# pmls.readthedocs.io
 Main Parallel ML System readthedocs page that links to individual projects.
