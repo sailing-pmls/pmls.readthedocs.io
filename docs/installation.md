@@ -20,10 +20,10 @@ sudo apt-get -y install git
 Then, run the following commands to download PMLS Bösen and Strads:
 
 ```
-git clone -b stable https://github.com/petuum/bosen.git
-git clone https://github.com/petuum/strads.git
+git clone -b stable https://github.com/sailing-pmls/bosen.git
+git clone https://github.com/sailing-pmls/strads.git
 cd bosen
-git clone https://github.com/petuum/third_party.git third_party
+git clone https://github.com/sailing-pmls/third_party.git third_party
 cd ..
 ```
 
