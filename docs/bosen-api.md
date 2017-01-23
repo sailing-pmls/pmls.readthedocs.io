@@ -5,7 +5,7 @@
 Click [here](http://docs.petuum.com/projects/petuum-bosen/en/latest/) for Bosen API Documentations.
 
 ## Write your first PMLS Bosen App
-After you have successfully completed the compilation process, you can follow this tutorial and start writing you first Bosen Application. The code fragments of this tutorial come from our [demo program](https://github.com/petuum/bosen/tree/master/app/app_demo). Our demo implements logistic regression and tests it on the [UCI Breast Cancer dataset](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29). Enter the [app directory](https://github.com/petuum/bosen/tree/master/app/app_demo) and run the launching script with
+After you have successfully completed the compilation process, you can follow this tutorial and start writing you first Bosen Application. The code fragments of this tutorial come from our [demo program](https://github.com/sailing-pmls/bosen/tree/master/app/app_demo). Our demo implements logistic regression and tests it on the [UCI Breast Cancer dataset](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29). Enter the [app directory](https://github.com/sailing-pmls/bosen/tree/master/app/app_demo) and run the launching script with
 
 ```python
 python script/launch.py
