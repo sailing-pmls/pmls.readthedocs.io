@@ -34,9 +34,9 @@ The PMLS project is organized into 4 open-source (BSD 3-clause license) Github r
 * [Bösen (C++ bounded-async key-value store)](https://github.com/sailing-pmls/bosen)
 * [Strads (C++ model-parallel scheduler)](https://github.com/sailing-pmls/strads)
 * [JBösen (Java bounded-async key-value store)](https://github.com/sailing-pmls/jbosen)
-* [Poseidon (Deep Learning framework)](https://github.com/sailing-pmls/poseidon)
+* [PMLS-Caffe (Deep Learning framework)](https://github.com/sailing-pmls/pmls-caffe)
 
-To install Bösen and Strads, please continue reading this manual. If you have a Java environment and want to use JBösen, please start [here](https://github.com/sailing-pmls/jbosen/wiki). If you wish to use Poseidon for Deep Learning, please go [here](https://github.com/sailing-pmls/poseidon/wiki).
+To install Bösen and Strads, please continue reading this manual. If you have a Java environment and want to use JBösen, please start [here](https://github.com/sailing-pmls/jbosen/wiki). If you wish to use PMLS-Caffe for Deep Learning, please go [here](https://github.com/sailing-pmls/pmls-caffe/wiki).
 
 ## PMLS Bösen/Strads v1.1 manual
 
@@ -50,7 +50,7 @@ To install Bösen and Strads, please continue reading this manual. If you have a
         1. [Latent Dirichlet Allocation (topic modeling)](latent-dirichlet-allocation.md)
         1. [MedLDA (supervised topic modeling)](med-lda.md)
     1. Deep Learning
-        1. [Poseidon: Distributed Deep Learning Framework on PMLS](https://github.com/sailing-pmls/poseidon/wiki)
+        1. [PMLS-Caffe: Distributed Deep Learning Framework on PMLS](https://github.com/sailing-pmls/pmls-caffe/wiki)
         1. [General-purpose Deep Neural Network (DNN)](dnn-general.md)
             1. [DNN for Speech Recognition](dnn-speech.md)
     1. Matrix Factorization and Sparse Coding
