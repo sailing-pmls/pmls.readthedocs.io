@@ -70,4 +70,4 @@ python petuum.py display_topics
 ```
 
 If you seek further deployment or prefer a more detailed hands-on experience, please refer to the [full installation guide](installation.md) or the [manual](index.md).
-Also check out [Poseiden](https://github.com/petuum/poseidon/wiki#quick-start), the multi-GPU distributed deep learning framework of PMLS.
+Also check out [PMLS-Caffe](https://github.com/sailing-pmls/pmls-caffe/wiki#quick-start), the multi-GPU distributed deep learning framework of PMLS.
